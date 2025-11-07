@@ -1,0 +1,32 @@
+{
+    "recommend_tests.predict": {
+        "traces": [],
+        "train": [],
+        "demos": [],
+        "signature": {
+            "instructions": "You are a highly experienced and meticulous medical diagnostician. Your task is critical: based on the patient's detailed `question` describing their symptoms, you must first provide a comprehensive `reasoning` that analyzes the symptoms, considers potential conditions, and explains the diagnostic rationale. Then, based on this thorough reasoning, you must recommend a precise and comprehensive list of appropriate `diagnostic_tests` necessary to investigate the described symptoms. The accuracy and completeness of your recommendations are paramount, as they directly impact patient care and safety.",
+            "fields": [
+                {
+                    "prefix": "Question:",
+                    "description": "${question}"
+                },
+                {
+                    "prefix": "Reasoning: Let's think step by step in order to",
+                    "description": "${reasoning}"
+                },
+                {
+                    "prefix": "Diagnostic Tests:",
+                    "description": "${diagnostic_tests}"
+                }
+            ]
+        },
+        "lm": null
+    },
+    "metadata": {
+        "dependency_versions": {
+            "python": "3.13",
+            "dspy": "3.0.3",
+            "cloudpickle": "3.1"
+        }
+}
+}

@@ -99,3 +99,33 @@ Your code will not work without the MLflow server running locally.
 
 [MLflow Quickstart Documentation](https://mlflow.org/docs/latest/ml/getting-started/quickstart/)
 
+## Output of each example 
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-07 % python example-1-basic-qa-mlflow-integration.py
+2025/11/07 12:12:57 INFO mlflow.tracking.fluent: Experiment with name 'dspy-mlops-integration' does not exist. Creating a new experiment.
+Question: What's the full form of CoT in the AI field?
+Answer: Chain-of-Thought
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-07 % python example-2-prompt-registry.py 
+2025/11/07 12:16:54 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for prompt version to finish creation. Prompt name: medical_diagnostic_recommender, version 1
+(env) ank@Ankurs-MacBook-Air chapter-07 % 
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-07 % python example-3-tweet-generator.py 
+2025/11/07 12:26:05 INFO mlflow.tracking.fluent: Experiment with name 'tweet_generator' does not exist. Creating a new experiment.
+🏃 View run tweet_What makes DSPy awesome?. at: http://127.0.0.1:5000/#/experiments/2/runs/97aa0f2b9c3f433086e8f5facd36dddd
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/2
+Generated: What makes DSPy truly awesome? ✨ It's the programmatic control over LLMs, optimizing prompts AND weights for better performance & reliability! Build robust, production-ready LLM applications with ease.
+
+#DSPy #LLMs #AI #MachineLearning #PromptEngineering
+Engagement: 1.00, Hashtags: 0.50
+
+🏃 View run tweet_Why coffee is the best product at: http://127.0.0.1:5000/#/experiments/2/runs/f748d1fbeb314d58a36a666f9bb0bd8b
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/2
+Generated: Need a productivity hack? ☕️ Coffee isn't just a drink, it's your secret weapon! Boosts focus, sharpens alertness, and kickstarts your day. Unbeatable fuel for getting things done efficiently. What's your go-to productivity brew? #Coffee #ProductivityHack #Focus #EnergyBoost #WorkLife
+Engagement: 0.70, Hashtags: 0.50
+```
