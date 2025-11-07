@@ -102,4 +102,9 @@ For model names and specifications, refer to:
 ## Notes
 
 - Each chapter's code is located in its respective folder
+- [Chapter 7](chapter-07/): MLflow Integration Examples
+  - [Chapter 7 README](chapter-07/README.md): Contains setup instructions for MLflow server and examples of:
+    - [Basic QA MLflow Integration](chapter-07/example-1-basic-qa-mlflow-integration.py)
+    - [Prompt Registry with MLflow](chapter-07/example-2-prompt-registry.py)
+    - [Tweet Generator with MLflow Experiment Tracking](chapter-07/example-3-tweet-generator.py)
 
