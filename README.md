@@ -39,12 +39,26 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-4. Upgrade pip and install dependencies:
+On Windows (PowerShell)
+
+`env\Scripts\Activate.ps1`
+
+On Windows (cmd.exe)
+
+`env\Scripts\activate.bat`
+
+1. Upgrade pip and install dependencies:
 
 ```bash
 pip3 install --upgrade pip
 pip3 install -r requirements.txt
 ```
+
+On Windows you may use `pip` if `pip3` is not available:
+
+`pip install --upgrade pip`
+
+`pip install -r requirements.txt`
 
 5. Verify DSPy version:
 
@@ -100,8 +114,18 @@ For model names and specifications, refer to:
 ---
 
 ## Notes
-
 - Each chapter's code is located in its respective folder
+
+- [Chapter 1](chapter-01/): Introductory DSPy examples
+  - [Chapter 1 README](chapter-01/README.md): Chapter-specific notes, prerequisites, Ollama setup, example script list, run instructions and sample outputs.
+  - [example-1-hello-ai.py](chapter-01/example-1-hello-ai.py): Basic "hello AI" example demonstrating a minimal prompt and response flow with DSPy.
+  - [example-2-setup-dspy.py](chapter-01/example-2-setup-dspy.py): Shows initializing and configuring DSPy (LM setup, environment checks).
+  - [example-3-feedback-analysis.py](chapter-01/example-3-feedback-analysis.py): Script illustrating simple feedback analysis and aggregation using DSPy helpers.
+  - [example-4-news-headline-category.py](chapter-01/example-4-news-headline-category.py): Basic classification of news headlines into categories.
+  - [example-5-news-headline-indepth-categorization.py](chapter-01/example-5-news-headline-indepth-categorization.py): More detailed categorization pipeline for headlines with richer prompts/analysis.
+  - [example-6-new-product-analysis.py](chapter-01/example-6-new-product-analysis.py): Example analyzing new product descriptions and extracting insights.
+  - [utils.py](chapter-01/utils.py): Utility functions reused across the chapter examples.
+  - [Chapter 1 README](chapter-01/README.md)
 - [Chapter 7](chapter-07/): MLflow Integration Examples
   - [Chapter 7 README](chapter-07/README.md): Contains setup instructions for MLflow server and examples of:
     - [Basic QA MLflow Integration](chapter-07/example-1-basic-qa-mlflow-integration.py)
