@@ -42,6 +42,65 @@ python example-1-hello-ai.py
 Let us execute the hello world script and see the response from the phi3:mini model:
 
 ```bash
-python example-1-hello-ai.py
-['Hello, world! How can I help you today?']
+(env) ank@Ankurs-MacBook-Air chapter-01 % python example-1-hello-ai.py
+['Hello back! A classic start. How can I help you today?']
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-01 % python example-2-setup-dspy.py   
+["The Empire State Building is located in **New York City, New York, USA**. More specifically, it's in Midtown Manhattan, at 350 Fifth Avenue.\n"]
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-01 % python example-3-feedback-analysis.py gemini/gemini-2.0-flash-exp 1000
+Note: Response may not be valid JSON format
+```json
+{
+  "themes": {
+    "negative": [
+      "App crashes frequently on iOS",
+      "Crashing when uploading photos",
+      "Confusing interface",
+      "Difficulty finding settings menu"
+    ],
+    "positive": [
+      "Love the new dark mode feature",
+      "Amazing photo filters"
+    ]
+  }
+}
+```
+```
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-01 % python3 example-4-news-headline-category.py 
+Headline: New advancements in AI technology are transforming industries worldwide.
+Predicted Category: Technology
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-01 % python3 example-5-news-headline-indepth-categorization.py 
+Article: In a landmark decision, the Supreme Court ruled today that climate change
+    regulations must be strengthened to meet international commitments. The ruling,
+    which was 6-3, mandates that federal agencies implement stricter emissions standards
+    by 2025. Environmental groups hailed the decision as a major victory, while industry
+    leaders expressed concern over potential economic impacts. The ruling is expected to
+    influence policy discussions ahead of the upcoming global climate summit.
+
+Predicted Category: Politics
+Entities: ['Supreme Court', 'federal agencies', '2025']
+Facts: ['The Supreme Court ruled that climate change regulations must be strengthened.', 'The ruling was 6-3.', 'Federal agencies must implement stricter emissions standards by 2025.', 'Environmental groups hailed the decision as a major victory.', 'Industry leaders expressed concern over potential economic impacts.']
+Sentiment: neutral
+Topics: ['Climate change regulations', 'Supreme Court ruling', 'Emissions standards', 'Environmental policy']
+Summary: The Supreme Court ruled in a 6-3 decision that climate change regulations must be strengthened, mandating stricter emissions standards by 2025. Environmental groups praised the decision, while industry leaders voiced concerns about economic impacts.
+```
+
+```bash
+(env) ank@Ankurs-MacBook-Air chapter-01 % python example-6-new-product-analysis.py                 
+iPhone 17 Pro
+Electronics
+999.0
+True
+<class '__main__.ProductInfo'>
 ```

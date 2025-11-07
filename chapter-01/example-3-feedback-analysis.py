@@ -14,6 +14,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python script.py <model_name> <max_tokens>")
         sys.exit(1)
+    
     model_name = sys.argv[1]
     max_tokens = int(sys.argv[2])
     lm = setup_dspy(model_name, max_tokens)

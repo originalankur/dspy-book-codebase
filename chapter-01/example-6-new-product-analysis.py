@@ -1,7 +1,7 @@
 import dspy
 from pydantic import BaseModel, Field
 
-lm = dspy.LM('google/gemini-1.5-flash')
+lm = dspy.LM('gemini/gemini-2.0-flash-exp')
 dspy.configure(lm=lm)
 
 class ProductInfo(BaseModel):
