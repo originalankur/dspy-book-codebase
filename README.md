@@ -1,2 +1,1 @@
-# dspy-book-codebase
-DSPy Book Codebase
+# Repository To Accompany The DSPy Book
