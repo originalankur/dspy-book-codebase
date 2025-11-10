@@ -125,7 +125,20 @@ For model names and specifications, refer to:
   - [example-5-news-headline-indepth-categorization.py](chapter-01/example-5-news-headline-indepth-categorization.py): More detailed categorization pipeline for headlines with richer prompts/analysis.
   - [example-6-new-product-analysis.py](chapter-01/example-6-new-product-analysis.py): Example analyzing new product descriptions and extracting insights.
   - [utils.py](chapter-01/utils.py): Utility functions reused across the chapter examples.
-  - [Chapter 1 README](chapter-01/README.md)
+- [Chapter 2](chapter-02/): Advanced DSPy Modules and Prediction Techniques
+  - [Chapter 2 README](chapter-02/README.md): Chapter-specific notes, Deno setup for CodeAct/PoT, example script list, run instructions and sample outputs.
+  - [example-1-custom-dspy-module.py](chapter-02/example-1-custom-dspy-module.py): Creating custom DSPy modules for news classification.
+  - [example-2-dspy-predict-few-shot-learning.py](chapter-02/example-2-dspy-predict-few-shot-learning.py): Few-shot learning with medical coding examples.
+  - [example-3-chain_of_thought.py](chapter-02/example-3-chain_of_thought.py): Chain of Thought reasoning for step-by-step problem solving.
+  - [example-4-ticket-classification.py](chapter-02/example-4-ticket-classification.py): Support ticket classification with SLA routing.
+  - [example-5-domain-name-react.py](chapter-02/example-5-domain-name-react.py): ReAct pattern for domain name generation and availability checking.
+  - [example-6-investment-signature-pot.py](chapter-02/example-6-investment-signature-pot.py): Program of Thought for investment calculations with Python code generation.
+  - [example-7-text-processing-cot.py](chapter-02/example-7-text-processing-cot.py): CodeAct for text analysis using custom tools.
+  - [example-8-investment-strategy-multi-chain.py](chapter-02/example-8-investment-strategy-multi-chain.py): MultiChainComparison for evaluating multiple investment strategies.
+  - [example-9-ecom-product-description-best-of-n.py](chapter-02/example-9-ecom-product-description-best-of-n.py): BestOfN sampling with custom scoring for product descriptions.
+  - [example-10-refine-customer-support.py](chapter-02/example-10-refine-customer-support.py): Iterative refinement of customer support responses.
+  - [example-11-parallel.py](chapter-02/example-11-parallel.py): Parallel processing of multiple predictions.
+  - [example-12-pipeline.py](chapter-02/example-12-pipeline.py): Building multi-stage pipelines for medical diagnosis.
 - [Chapter 7](chapter-07/): MLflow Integration Examples
   - [Chapter 7 README](chapter-07/README.md): Contains setup instructions for MLflow server and examples of:
     - [Basic QA MLflow Integration](chapter-07/example-1-basic-qa-mlflow-integration.py)
