@@ -10,8 +10,8 @@ from typing import Dict, Any, List
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 
-from reporank.models.repository_data import RepositoryData
-from reporank.utils.logger import get_logger
+from models.repository_data import RepositoryData
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

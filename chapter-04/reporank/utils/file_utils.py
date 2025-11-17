@@ -285,7 +285,7 @@ def safe_filename(filename: str, max_length: int = 255) -> str:
     Returns:
         Safe filename
     """
-    from reporank.utils.validators import sanitize_filename
+    from utils.validators import sanitize_filename
     return sanitize_filename(filename, max_length)
 
 

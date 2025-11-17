@@ -1,13 +1,13 @@
 """Utility modules for RepoRank."""
 
-from reporank.utils.logger import (
+from utils.logger import (
     setup_logger,
     get_logger,
     log_error_with_context,
     StructuredFormatter
 )
 
-from reporank.utils.validators import (
+from utils.validators import (
     validate_github_url,
     validate_github_name,
     validate_directory_path,
@@ -21,7 +21,7 @@ from reporank.utils.validators import (
     sanitize_filename
 )
 
-from reporank.utils.file_utils import (
+from utils.file_utils import (
     ensure_directory,
     create_temp_directory,
     cleanup_directory,
@@ -42,7 +42,7 @@ from reporank.utils.file_utils import (
     directory_exists
 )
 
-from reporank.utils.data_utils import (
+from utils.data_utils import (
     normalize_score,
     calculate_percentage,
     safe_divide,
