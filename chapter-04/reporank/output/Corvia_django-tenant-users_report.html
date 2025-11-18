@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RepoRank Analysis Report - Corvia/django-tenant-users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        }
+        
+        code, .font-mono {
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+        }
+
+        :root {
+            --gh-canvas-default: #ffffff;
+            --gh-canvas-subtle: #f6f8fa;
+            --gh-canvas-inset: #ffffff;
+            --gh-canvas-overlay: #ffffff;
+            --gh-border-default: #d0d7de;
+            --gh-border-muted: #e5e7eb;
+            --gh-fg-default: #24292f;
+            --gh-fg-muted: #57606a;
+            --gh-fg-subtle: #6e7681;
+            --gh-accent-fg: #0969da;
+            --gh-success-fg: #1a7f37;
+            --gh-attention-fg: #9e6a03;
+            --gh-danger-fg: #da3633;
+            --gh-neutral-muted: #f6f8fa;
+        }
+
+        html {
+            color-scheme: light;
+        }
+
+        body {
+            background-color: var(--gh-canvas-subtle);
+            color: var(--gh-fg-default);
+        }
+
+        .gh-header {
+            background-color: var(--gh-canvas-default);
+            border-bottom: 1px solid var(--gh-border-default);
+        }
+
+        .gh-card {
+            background-color: var(--gh-canvas-default);
+            border: 1px solid var(--gh-border-muted);
+            border-radius: 6px;
+        }
+
+        .gh-card:hover {
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .gh-section-title {
+            border-bottom: 1px solid var(--gh-border-muted);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .gh-label {
+            background-color: var(--gh-neutral-muted);
+            border: 1px solid var(--gh-border-muted);
+            border-radius: 24px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+            color: var(--gh-fg-default);
+        }
+
+        .gh-label-accent {
+            background-color: #f2f7ff;
+            border-color: #c8e6f5;
+            color: var(--gh-accent-fg);
+        }
+
+        .gh-label-success {
+            background-color: #dafbe1;
+            border-color: #6ee7b7;
+            color: var(--gh-success-fg);
+        }
+
+        .gh-label-warning {
+            background-color: #fff8c5;
+            border-color: #f4d584;
+            color: var(--gh-attention-fg);
+        }
+
+        .gh-label-danger {
+            background-color: #ffebe6;
+            border-color: #fca5a5;
+            color: var(--gh-danger-fg);
+        }
+
+        .gh-stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .gh-stat-value {
+            font-weight: 600;
+            color: var(--gh-fg-default);
+        }
+
+        .gh-stat-label {
+            color: var(--gh-fg-muted);
+        }
+
+        .gh-metric-box {
+            background-color: var(--gh-canvas-subtle);
+            border-radius: 6px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .gh-metric-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--gh-fg-default);
+        }
+
+        .gh-metric-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gh-fg-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gh-progress-bar {
+            background-color: var(--gh-border-muted);
+            border-radius: 4px;
+            height: 6px;
+            overflow: hidden;
+        }
+
+        .gh-progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .gh-progress-fill-success {
+            background-color: var(--gh-success-fg);
+        }
+
+        .gh-progress-fill-accent {
+            background-color: var(--gh-accent-fg);
+        }
+
+        .gh-progress-fill-warning {
+            background-color: var(--gh-attention-fg);
+        }
+
+        .gh-progress-fill-danger {
+            background-color: var(--gh-danger-fg);
+        }
+
+        .gh-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .gh-info-box {
+            background-color: #f2f7ff;
+            border-left: 4px solid var(--gh-accent-fg);
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--gh-fg-default);
+        }
+
+        .gh-success-box {
+            background-color: #dafbe1;
+            border-left: 4px solid var(--gh-success-fg);
+        }
+
+        .gh-warning-box {
+            background-color: #fff8c5;
+            border-left: 4px solid var(--gh-attention-fg);
+        }
+
+        .gh-danger-box {
+            background-color: #ffebe6;
+            border-left: 4px solid var(--gh-danger-fg);
+        }
+
+        .gh-separator {
+            border-top: 1px solid var(--gh-border-muted);
+        }
+
+        .gh-link {
+            color: var(--gh-accent-fg);
+            text-decoration: none;
+        }
+
+        .gh-link:hover {
+            text-decoration: underline;
+            color: #0860ca;
+        }
+
+        .section {
+            scroll-margin-top: 100px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --gh-canvas-default: #0d1117;
+                --gh-canvas-subtle: #161b22;
+                --gh-border-default: #30363d;
+                --gh-border-muted: #21262d;
+                --gh-fg-default: #c9d1d9;
+                --gh-fg-muted: #8b949e;
+                --gh-fg-subtle: #6e7681;
+                --gh-neutral-muted: #21262d;
+            }
+
+            body {
+                background-color: var(--gh-canvas-subtle);
+            }
+
+            .gh-card:hover {
+                box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+            }
+
+            .gh-info-box {
+                background-color: #0d2d52;
+                color: #79c0ff;
+            }
+
+            .gh-success-box {
+                background-color: #0d3d24;
+                color: #56d364;
+            }
+
+            .gh-warning-box {
+                background-color: #4d3c0f;
+                color: #d29922;
+            }
+
+            .gh-danger-box {
+                background-color: #3d1f1a;
+                color: #ff7b72;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .no-print {
+                display: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <div class="gh-header sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold">Corvia/django-tenant-users</h1>
+                    <div class="mt-2 flex items-center gap-3">
+                        <a href="https://github.com/Corvia/django-tenant-users" target="_blank" class="gh-link text-sm flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Repository
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="text-right">
+                        <div class="text-xs text-gray-500 font-medium">ANALYSIS DATE</div>
+                        <div class="text-sm font-semibold mt-1">2025-11-18</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs text-gray-500 font-medium">OVERALL SCORE</div>
+                        <div class="text-2xl font-bold mt-1">4.1/10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+
+        <!-- Overview Section -->
+        <section id="overview" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">Overview</h2>
+
+            <!-- Executive Summary -->
+            <div class="gh-card p-6 mb-6">
+                <h3 class="text-base font-semibold mb-3">Executive Summary</h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                    Adds global user authentication and tenant-specific permissions to django-tenants.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="gh-metric-box">
+                        <div class="gh-metric-label">Maturity Level</div>
+                        <div class="text-lg font-semibold">Early Stage</div>
+                    </div>
+                    <div class="gh-metric-box">
+                        <div class="gh-metric-label">Primary Use Case</div>
+                        <div class="text-lg font-semibold">Framework</div>
+                    </div>
+                    <div class="gh-metric-box">
+                        <div class="gh-metric-label">Domain</div>
+                        <div class="text-lg font-semibold">Web/API</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="gh-card p-4">
+                    <div class="gh-stat-label mb-2">⭐ Stars</div>
+                    <div class="gh-metric-value">409</div>
+                </div>
+                <div class="gh-card p-4">
+                    <div class="gh-stat-label mb-2">🔱 Forks</div>
+                    <div class="gh-metric-value">77</div>
+                </div>
+                <div class="gh-card p-4">
+                    <div class="gh-stat-label mb-2">👥 Contributors</div>
+                    <div class="gh-metric-value">25</div>
+                </div>
+            </div>
+
+            <!-- Strengths & Weaknesses -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="gh-card p-6">
+                    <h3 class="text-base font-semibold mb-4 flex items-center gap-2">
+                        <span>✅</span> Key Strengths
+                    </h3>
+                    <ul class="space-y-3">
+                        
+                        <li class="flex items-start gap-2 text-sm">
+                            <span class="text-green-600 flex-shrink-0">✓</span>
+                            <span class="text-gray-700">Strong security practices (score: 9.5)</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="gh-card p-6">
+                    <h3 class="text-base font-semibold mb-4 flex items-center gap-2">
+                        <span>⚠️</span> Areas for Improvement
+                    </h3>
+                    <ul class="space-y-3">
+                        
+                        <li class="flex items-start gap-2 text-sm">
+                            <span class="text-amber-600 flex-shrink-0">!
+
+</span>
+                            <span class="text-gray-700">Poor documentation quality (score: 3.4)</span>
+                        </li>
+                        
+                        <li class="flex items-start gap-2 text-sm">
+                            <span class="text-amber-600 flex-shrink-0">!
+
+</span>
+                            <span class="text-gray-700">Weak code structure (score: 3.9)</span>
+                        </li>
+                        
+                        <li class="flex items-start gap-2 text-sm">
+                            <span class="text-amber-600 flex-shrink-0">!
+
+</span>
+                            <span class="text-gray-700">Low activity health (score: 4.1)</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quick Stats Bar -->
+            <div class="gh-card p-6">
+                <h3 class="text-base font-semibold mb-4">Repository Health Snapshot</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="gh-stat">
+                        <div class="flex-1">
+                            <div class="gh-stat-label block">Last Commit</div>
+                            <div class="gh-stat-value block">2025-10-08T07:30:21</div>
+                        </div>
+                    </div>
+                    <div class="gh-stat">
+                        <div class="flex-1">
+                            <div class="gh-stat-label block">License</div>
+                            <div class="gh-stat-value block">MIT License</div>
+                        </div>
+                    </div>
+                    <div class="gh-stat">
+                        <div class="flex-1">
+                            <div class="gh-stat-label block">Maturity</div>
+                            <div class="gh-stat-value block">Early Stage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metadata Section -->
+        <section id="metadata" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">Metadata & Stats</h2>
+
+            <div class="gh-card p-6 mb-6">
+                <h3 class="text-base font-semibold mb-6">Repository Metadata</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-3 text-gray-900">Basic Information</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm py-2 border-b border-gray-200">
+                                <span class="text-gray-600">Created</span>
+                                <span class="font-mono">2016-08-20T19:27:38Z</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-gray-200">
+                                <span class="text-gray-600">Last Updated</span>
+                                <span class="font-mono">2025-10-17T09:18:34Z</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-gray-200">
+                                <span class="text-gray-600">Default Branch</span>
+                                <span class="font-mono">master</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2">
+                                <span class="text-gray-600">Primary Language</span>
+                                <span class="font-mono">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold mb-3 text-gray-900">Engagement Metrics</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm py-2 border-b border-gray-200">
+                                <span class="text-gray-600">Stars</span>
+                                <span class="font-mono">409</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-gray-200">
+                                <span class="text-gray-600">Forks</span>
+                                <span class="font-mono">77</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2">
+                                <span class="text-gray-600">Contributors</span>
+                                <span class="font-mono">25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commit Statistics -->
+            <div class="gh-card p-6 mb-6">
+                <h3 class="text-base font-semibold mb-4">Commit Activity</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="gh-metric-box">
+                        <div class="gh-metric-label">Total Commits</div>
+                        <div class="gh-metric-value">799</div>
+                    </div>
+                    <div class="gh-metric-box">
+                        <div class="gh-metric-label">Last Commit</div>
+                        <div class="gh-metric-value text-lg">2025-10-08T07:30:21</div>
+                    </div>
+                </div>
+                <div style="height: 200px;">
+                    <canvas id="commitChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Assessment Section -->
+        <section id="quality" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">Quality Assessment</h2>
+
+            <div class="gh-card p-6 mb-6">
+                <!-- Quality Score Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="gh-metric-box bg-slate-100">
+                        <div class="gh-metric-label">README Quality</div>
+                        <div class="text-3xl font-bold">3.4/10</div>
+                        <div class="text-xs text-gray-600 mt-1">Needs Improvement</div>
+                    </div>
+                    <div class="gh-metric-box bg-blue-100">
+                        <div class="gh-metric-label">Code Structure</div>
+                        <div class="text-3xl font-bold">3.9/10</div>
+                        <div class="text-xs text-gray-600 mt-1">Needs Improvement</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Quality Metrics -->
+                <div class="space-y-4 border-t border-gray-200 pt-6">
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">📚</span>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Documentation Quality</div>
+                                    <div class="text-xs text-gray-600">README, examples, inline docs</div>
+                                </div>
+                                <div class="text-base font-bold">3.4/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-2">
+                                <div class="gh-progress-fill gh-progress-fill-success" style="width: 34%"></div>
+                            </div>
+                            <div class="text-xs text-gray-600">
+                                
+                                ✓ Comprehensive README with examples • 
+                                
+                                ✓ Well-commented code
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-separator my-4"></div>
+
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🏗️</span>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Project Structure</div>
+                                    <div class="text-xs text-gray-600">Organization and architecture</div>
+                                </div>
+                                <div class="text-base font-bold">3.9/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-2">
+                                <div class="gh-progress-fill gh-progress-fill-accent" style="width: 39%"></div>
+                            </div>
+                            <div class="text-xs text-gray-600">
+                                
+                                ✓ Clear module separation • 
+                                
+                                ✓ Logical directory structure
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-separator my-4"></div>
+
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🔒</span>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Security Practices</div>
+                                    <div class="text-xs text-gray-600">Security measures and policies</div>
+                                </div>
+                                <div class="text-base font-bold">9.5/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-2">
+                                <div class="gh-progress-fill gh-progress-fill-warning" style="width: 95%"></div>
+                            </div>
+                            <div class="text-xs text-gray-600">
+                                
+                                ✓ Security best practices followed
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-separator my-4"></div>
+
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">📦</span>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Dependency Management</div>
+                                    <div class="text-xs text-gray-600">Dependencies and updates</div>
+                                </div>
+                                <div class="text-base font-bold">9.2/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-2">
+                                <div class="gh-progress-fill gh-progress-fill-success" style="width: 92%"></div>
+                            </div>
+                            <div class="text-xs text-gray-600">
+                                
+                                ✓ Well-managed dependencies
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity & Health Section -->
+        <section id="activity" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">Activity & Health</h2>
+
+            <div class="gh-card p-6 mb-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <div class="text-sm font-medium text-gray-600 mb-2">OVERALL HEALTH SCORE</div>
+                        <div class="text-4xl font-bold mb-2">4.1/10</div>
+                        <div class="text-sm text-gray-600">Maintained • Active Community</div>
+                    </div>
+                    <div class="text-5xl">💪</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">Tech Stack</h2>
+
+            <!-- Primary Language -->
+            <div class="gh-card p-6 mb-6">
+                <div class="flex items-start justify-between gap-4 mb-6">
+                    <div>
+                        <div class="text-sm font-medium text-gray-600 mb-2">PRIMARY LANGUAGE</div>
+                        <div class="text-3xl font-bold mb-2">Python </div>
+                        <div class="text-sm text-gray-600">100.0% of codebase</div>
+                    </div>
+                    <div class="text-5xl">🐍</div>
+                </div>
+            </div>
+
+            <!-- Language Breakdown -->
+            <div class="gh-card p-6 mb-6">
+                <h3 class="text-base font-semibold mb-4">Languages Used</h3>
+                <div class="flex flex-wrap gap-2">
+                    
+                    <span class="gh-label gh-label-accent">
+                        Python
+                    </span>
+                    
+                </div>
+            </div>
+
+            <!-- Core Dependencies -->
+            <div class="gh-card p-6">
+                <h3 class="text-base font-semibold mb-4 flex items-center gap-2">
+                    <span>📦</span> Core Dependencies
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- LLM Evaluation Section -->
+        
+        <section id="llm" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">LLM Evaluation</h2>
+
+            <div class="gh-info-box mb-6">
+                <strong>About LLM Evaluation:</strong> These scores are generated using advanced language models with Chain-of-Thought reasoning to assess subjective quality dimensions that are difficult to measure programmatically.
+            </div>
+
+            <!-- Overall LLM Score -->
+            <div class="gh-card p-6 mb-6">
+                <div class="text-center mb-6">
+                    <div class="text-sm font-medium text-gray-600 mb-2">COMPOSITE LLM QUALITY SCORE</div>
+                    <div class="text-5xl font-bold mb-2">5.7/10</div>
+                    <div class="text-sm text-gray-600">Based on 4 evaluation dimensions</div>
+                </div>
+
+                <!-- Detailed LLM Scores -->
+                <div class="space-y-4 border-t border-gray-200 pt-6">
+                    <!-- Code Architecture Quality -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Code Architecture Quality</div>
+                                    <div class="text-xs text-gray-600">Overall design, structure, and maintainability</div>
+                                </div>
+                                <div class="text-xl font-bold">3.2/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-3">
+                                <div class="gh-progress-fill gh-progress-fill-accent" style="width: 32%"></div>
+                            </div>
+                            <div class="bg-gray-50 rounded p-3 text-xs text-gray-700 border border-gray-200">
+                                <strong class="block text-gray-900 mb-1">LLM Reasoning:</strong>
+                                <div class="prose prose-sm max-w-none"><p class="mb-2">Architecture demonstrates clear separation of concerns with modular design patterns.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-separator"></div>
+
+                    <!-- Production Readiness -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Production Readiness</div>
+                                    <div class="text-xs text-gray-600">Suitability for real-world deployment</div>
+                                </div>
+                                <div class="text-xl font-bold">8.3/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-3">
+                                <div class="gh-progress-fill gh-progress-fill-success" style="width: 83%"></div>
+                            </div>
+                            <div class="bg-gray-50 rounded p-3 text-xs text-gray-700 border border-gray-200">
+                                <strong class="block text-gray-900 mb-1">LLM Reasoning:</strong>
+                                <div class="prose prose-sm max-w-none"><p class="mb-2">Project shows good test coverage and deployment practices for production use.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-separator"></div>
+
+                    <!-- Learning Value -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Learning Value</div>
+                                    <div class="text-xs text-gray-600">Educational value for developers</div>
+                                </div>
+                                <div class="text-xl font-bold">3.5/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-3">
+                                <div class="gh-progress-fill gh-progress-fill-warning" style="width: 35%"></div>
+                            </div>
+                            <div class="bg-gray-50 rounded p-3 text-xs text-gray-700 border border-gray-200">
+                                <strong class="block text-gray-900 mb-1">LLM Reasoning:</strong>
+                                <div class="prose prose-sm max-w-none"><p class="mb-2">Well-documented codebase with clear examples makes it valuable for learning.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gh-separator"></div>
+
+                    <!-- Security Posture -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <div class="text-sm font-semibold">Security Posture</div>
+                                    <div class="text-xs text-gray-600">Security practices and vulnerability management</div>
+                                </div>
+                                <div class="text-xl font-bold">7.6/10</div>
+                            </div>
+                            <div class="gh-progress-bar mb-3">
+                                <div class="gh-progress-fill gh-progress-fill-danger" style="width: 76%"></div>
+                            </div>
+                            <div class="bg-gray-50 rounded p-3 text-xs text-gray-700 border border-gray-200">
+                                <strong class="block text-gray-900 mb-1">LLM Reasoning:</strong>
+                                <div class="prose prose-sm max-w-none"><p class="mb-2">Security best practices are followed with regular dependency updates and vulnerability scanning.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evaluation Metadata -->
+            <div class="gh-card p-4">
+                <div class="text-xs text-gray-600 space-y-2">
+                    <div><strong>Evaluation Model:</strong> GPT-4 with Chain-of-Thought reasoning</div>
+                    <div><strong>Evaluation Date:</strong> 2025-11-18T13:05:32.671611</div>
+                    <div><strong>Consistency Check:</strong> 3 independent evaluations averaged</div>
+                    <div><strong>Human Validation:</strong> Validated against expert ratings</div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Recommendations Section -->
+        
+        <section id="recommendations" class="section mb-12">
+            <h2 class="text-xl font-bold gh-section-title">Recommendations</h2>
+
+            <!-- Risk Assessment -->
+            <div class="gh-card p-6 mb-6">
+                <h3 class="text-base font-semibold mb-4 flex items-center gap-2">
+                    <span>⚠️</span> Risk Assessment
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="border border-gray-200 rounded p-4">
+                        <div class="text-xs text-gray-600 font-medium mb-2">SECURITY RISK</div>
+                        <div class="text-xl font-bold text-red-600">
+                            Unknown
+                        </div>
+                        <div class="text-xs text-gray-600 mt-2">No significant security risks identified</div>
+                    </div>
+                    <div class="border border-gray-200 rounded p-4">
+                        <div class="text-xs text-gray-600 font-medium mb-2">ADOPTION RISK</div>
+                        <div class="text-xl font-bold text-red-600">
+                            Unknown
+                        </div>
+                        <div class="text-xs text-gray-600 mt-2">Overall risk level based on 0 factors</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Areas for Improvement -->
+            <div class="gh-card p-6 mb-6">
+                <h3 class="text-base font-semibold mb-4 flex items-center gap-2">
+                    <span>🔧</span> Recommended Improvements
+                </h3>
+                <div class="space-y-4">
+                    
+                    <div class="border-l-4 border-blue-600 bg-gray-50 p-4 rounded">
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">📊</span>
+                            <div class="flex-1">
+                                <div class="font-semibold text-sm">Increase test coverage</div>
+                                <div class="text-xs text-gray-700 mt-1 mb-2">Improve reliability through comprehensive testing</div>
+                                <span class="gh-label gh-label-accent">
+                                    Priority: 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-600 bg-gray-50 p-4 rounded">
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">🔐</span>
+                            <div class="flex-1">
+                                <div class="font-semibold text-sm">Add code documentation</div>
+                                <div class="text-xs text-gray-700 mt-1 mb-2">Add more inline code documentation and examples</div>
+                                <span class="gh-label gh-label-accent">
+                                    Priority: 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-600 bg-gray-50 p-4 rounded">
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">📚</span>
+                            <div class="flex-1">
+                                <div class="font-semibold text-sm">Security scanning</div>
+                                <div class="text-xs text-gray-700 mt-1 mb-2">Implement automated security scanning</div>
+                                <span class="gh-label gh-label-accent">
+                                    Priority: 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-600 bg-gray-50 p-4 rounded">
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">📚</span>
+                            <div class="flex-1">
+                                <div class="font-semibold text-sm">Contribution guidelines</div>
+                                <div class="text-xs text-gray-700 mt-1 mb-2">Establish clear contribution guidelines</div>
+                                <span class="gh-label gh-label-accent">
+                                    Priority: 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Final Verdict -->
+            <div class="gh-card p-6">
+                <h3 class="text-base font-semibold mb-4 flex items-center gap-2">
+                    <span>🎯</span> Final Verdict
+                </h3>
+                <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                    <strong></strong> This repository shows solid quality with some areas for improvement.
+                </p>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>Best suited for:</strong> 
+                </p>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer -->
+    <div class="gh-header border-t no-print mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center text-xs text-gray-600">
+            <p>Generated by RepoRank • Analysis Date: 2025-11-18</p>
+            <p class="mt-1">Powered by DSPy with LLM-as-Judge evaluation</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Charts and Smooth Scrolling -->
+    <script>
+        // Initialize Chart.js for commit activity
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('commitChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [{
+                            label: 'Commits',
+                            data: [
+                                4,
+                                4,
+                                7,
+                                2,
+                                2,
+                                6,
+                                11,
+                                0,
+                                35,
+                                15,
+                                14,
+                                3
+                            ],
+                            borderColor: 'rgb(9, 105, 218)',
+                            backgroundColor: 'rgba(9, 105, 218, 0.08)',
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 4,
+                            pointBackgroundColor: 'rgb(9, 105, 218)',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            filler: {
+                                propagate: true
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    color: 'rgba(0, 0, 0, 0.05)',
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    font: {
+                                        size: 11
+                                    }
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false,
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    font: {
+                                        size: 11
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

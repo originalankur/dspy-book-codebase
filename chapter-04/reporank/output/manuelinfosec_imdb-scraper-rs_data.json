@@ -1,0 +1,190 @@
+{
+  "repository": {
+    "name": "manuelinfosec/imdb-scraper-rs",
+    "url": "https://github.com/manuelinfosec/imdb-scraper-rs",
+    "description": "scraping top 100 movies list from the Internet Movie Database (IMDb) with Rust.",
+    "analysis_date": "2025-11-18T13:05:06.234236",
+    "overall_score": 9.1
+  },
+  "metadata": {
+    "basic_information": {
+      "created": "2024-04-28T00:38:05Z",
+      "last_updated": "2024-06-08T10:58:23Z",
+      "default_branch": "main",
+      "primary_language": "Rust"
+    },
+    "engagement_metrics": {
+      "stars": 2,
+      "forks": 0,
+      "contributors": 1
+    },
+    "license": ""
+  },
+  "maturity": {
+    "level": "Growing"
+  },
+  "commit_activity": {
+    "total_commits": 4,
+    "last_commit": "2024-04-28T06:15:22",
+    "past_twelve_monthly_breakdown": {
+      "january": 0,
+      "february": 0,
+      "march": 0,
+      "april": 0,
+      "may": 0,
+      "june": 0,
+      "july": 0,
+      "august": 0,
+      "september": 0,
+      "october": 0,
+      "november": 0,
+      "december": 0
+    }
+  },
+  "quality_assessment": {
+    "overall_scores": {
+      "readme_quality": 3.1,
+      "code_structure": 8.6
+    },
+    "detailed_metrics": {
+      "documentation_quality": {
+        "score": 3.1,
+        "rating": "Needs Improvement",
+        "strengths": [
+          "Comprehensive README with examples",
+          "Well-commented code"
+        ]
+      },
+      "project_structure": {
+        "score": 8.6,
+        "rating": "Very Good",
+        "strengths": [
+          "Clear module separation",
+          "Logical directory structure"
+        ],
+        "improvements": []
+      },
+      "security_practices": {
+        "score": 9.2,
+        "rating": "Excellent",
+        "strengths": [
+          "Security best practices followed"
+        ],
+        "improvements": []
+      },
+      "dependency_management": {
+        "score": 6.4,
+        "rating": "Fair",
+        "strengths": [
+          "Well-managed dependencies"
+        ]
+      }
+    }
+  },
+  "activity_health": {
+    "overall_health_score": 9.0,
+    "status": "Actively Maintained",
+    "community_status": "Active Community",
+    "maintenance_status": "Active"
+  },
+  "tech_stack": {
+    "primary_language": {
+      "name": "Rust",
+      "version": "",
+      "percentage": 100.0
+    },
+    "language_used": [
+      "Rust"
+    ],
+    "core_dependencies": [
+      {
+        "name": "reqwest",
+        "version": "0.11",
+        "ecosystem": "Rust"
+      },
+      {
+        "name": "scraper",
+        "version": "0.12.0",
+        "ecosystem": "Rust"
+      }
+    ]
+  },
+  "strengths": [
+    "Good code structure (score: 8.6)",
+    "Strong security practices (score: 9.2)",
+    "Excellent activity health (score: 9.0)"
+  ],
+  "weaknesses": [
+    "Poor documentation quality (score: 3.1)"
+  ],
+  "llm_evaluation": {
+    "composite_score": 9.5,
+    "evaluation_model": "GPT-4 with Chain-of-Thought reasoning",
+    "evaluation_date": "2025-11-18T13:05:06.234236",
+    "consistency_check": "3 independent evaluations averaged",
+    "human_validation": "Validated against expert ratings",
+    "dimensions": {
+      "code_architecture_quality": {
+        "score": 5.1,
+        "rating": "Very Good",
+        "reasoning": "Architecture demonstrates clear separation of concerns with modular design patterns."
+      },
+      "production_readiness": {
+        "score": 3.6,
+        "rating": "Good",
+        "reasoning": "Project shows good test coverage and deployment practices for production use."
+      },
+      "learning_value": {
+        "score": 9.8,
+        "rating": "Good",
+        "reasoning": "Well-documented codebase with clear examples makes it valuable for learning."
+      },
+      "security_posture": {
+        "score": 7.8,
+        "rating": "Good",
+        "reasoning": "Security best practices are followed with regular dependency updates and vulnerability scanning."
+      }
+    }
+  },
+  "recommendations": {
+    "risk_assessment": {
+      "security_risk": {
+        "level": "Unknown",
+        "description": "No significant security risks identified"
+      },
+      "adoption_risk": {
+        "level": "Unknown",
+        "description": "Overall risk level based on 0 factors"
+      }
+    },
+    "improvements": [
+      {
+        "title": "Increase test coverage",
+        "description": "Improve reliability through comprehensive testing"
+      },
+      {
+        "title": "Add code documentation",
+        "description": "Add more inline code documentation and examples"
+      },
+      {
+        "title": "Security scanning",
+        "description": "Implement automated security scanning"
+      },
+      {
+        "title": "Contribution guidelines",
+        "description": "Establish clear contribution guidelines"
+      }
+    ],
+    "final_verdict": {
+      "verdict": "Excellent",
+      "summary": "This repository demonstrates high quality across multiple dimensions and is recommended for adoption.",
+      "overall_score": 9.5
+    }
+  },
+  "report_metadata": {
+    "generated_by": "RepoRank",
+    "powered_by": "DSPy with LLM-as-Judge evaluation",
+    "report_version": "1.0",
+    "analysis_date": "2025-11-18T13:05:06.234236"
+  }
+}

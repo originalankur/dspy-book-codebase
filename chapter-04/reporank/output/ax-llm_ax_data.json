@@ -1,0 +1,295 @@
+{
+  "repository": {
+    "name": "ax-llm/ax",
+    "url": "https://github.com/ax-llm/ax",
+    "description": "The pretty much \"official\" DSPy framework for Typescript",
+    "analysis_date": "2025-11-18T13:06:23.271378",
+    "overall_score": 5.7
+  },
+  "metadata": {
+    "basic_information": {
+      "created": "2023-02-23T19:21:40Z",
+      "last_updated": "2025-11-18T07:09:24Z",
+      "default_branch": "main",
+      "primary_language": "TypeScript"
+    },
+    "engagement_metrics": {
+      "stars": 2254,
+      "forks": 148,
+      "contributors": 0
+    },
+    "license": "Apache License 2.0"
+  },
+  "maturity": {
+    "level": "Early Stage"
+  },
+  "commit_activity": {
+    "total_commits": 1065,
+    "last_commit": "2025-11-05T13:42:39",
+    "past_twelve_monthly_breakdown": {
+      "january": 74,
+      "february": 67,
+      "march": 20,
+      "april": 10,
+      "may": 32,
+      "june": 105,
+      "july": 153,
+      "august": 71,
+      "september": 32,
+      "october": 33,
+      "november": 12,
+      "december": 17
+    }
+  },
+  "quality_assessment": {
+    "overall_scores": {
+      "readme_quality": 3.6,
+      "code_structure": 4.5
+    },
+    "detailed_metrics": {
+      "documentation_quality": {
+        "score": 3.6,
+        "rating": "Needs Improvement",
+        "strengths": [
+          "Comprehensive README with examples",
+          "Well-commented code"
+        ]
+      },
+      "project_structure": {
+        "score": 4.5,
+        "rating": "Needs Improvement",
+        "strengths": [
+          "Clear module separation",
+          "Logical directory structure"
+        ],
+        "improvements": []
+      },
+      "security_practices": {
+        "score": 4.0,
+        "rating": "Needs Improvement",
+        "strengths": [
+          "Security best practices followed"
+        ],
+        "improvements": []
+      },
+      "dependency_management": {
+        "score": 7.9,
+        "rating": "Good",
+        "strengths": [
+          "Well-managed dependencies"
+        ]
+      }
+    }
+  },
+  "activity_health": {
+    "overall_health_score": 8.2,
+    "status": "Actively Maintained",
+    "community_status": "Active Community",
+    "maintenance_status": "Active"
+  },
+  "tech_stack": {
+    "primary_language": {
+      "name": "TypeScript",
+      "version": "",
+      "percentage": 0.0
+    },
+    "language_used": [
+      "TypeScript"
+    ],
+    "core_dependencies": [
+      {
+        "name": "@biomejs/biome",
+        "version": "^2.1.1",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "@release-it/bumper",
+        "version": "^7.0.5",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "@release-it/conventional-changelog",
+        "version": "^10.0.1",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "@total-typescript/tsconfig",
+        "version": "^1.0.4",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "@types/node",
+        "version": "^22.13.10",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "c8",
+        "version": "^10.1.3",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "cspell",
+        "version": "^8.17.3",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "cz-conventional-changelog",
+        "version": "^3.0.1",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "gh-pages",
+        "version": "^6.1.1",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "glob",
+        "version": "^11.0.1",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "husky",
+        "version": "^9.0.0",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "npm-run-all2",
+        "version": "^8.0.4",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "release-it",
+        "version": "^19.0.3",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "standard-version",
+        "version": "^9.5.0",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "tsd",
+        "version": "^0.32.0",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "tsimp",
+        "version": "^2.0.12",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "tsup",
+        "version": "^8.5.0",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "tsx",
+        "version": "^4.19.4",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "typedoc",
+        "version": "^0.28.5",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "typedoc-plugin-frontmatter",
+        "version": "^1.2.1",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "typedoc-plugin-markdown",
+        "version": "^4.4.2",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "typescript",
+        "version": "^5.8.3",
+        "ecosystem": "Node.js"
+      },
+      {
+        "name": "vitest",
+        "version": "^3.2.1",
+        "ecosystem": "Node.js"
+      }
+    ]
+  },
+  "strengths": [
+    "Excellent activity health (score: 8.2)"
+  ],
+  "weaknesses": [
+    "Poor documentation quality (score: 3.6)",
+    "Weak code structure (score: 4.5)",
+    "Security concerns (score: 4.0)"
+  ],
+  "llm_evaluation": {
+    "composite_score": 3.4,
+    "evaluation_model": "GPT-4 with Chain-of-Thought reasoning",
+    "evaluation_date": "2025-11-18T13:06:23.271378",
+    "consistency_check": "3 independent evaluations averaged",
+    "human_validation": "Validated against expert ratings",
+    "dimensions": {
+      "code_architecture_quality": {
+        "score": 8.0,
+        "rating": "Very Good",
+        "reasoning": "Architecture demonstrates clear separation of concerns with modular design patterns."
+      },
+      "production_readiness": {
+        "score": 6.2,
+        "rating": "Good",
+        "reasoning": "Project shows good test coverage and deployment practices for production use."
+      },
+      "learning_value": {
+        "score": 6.0,
+        "rating": "Good",
+        "reasoning": "Well-documented codebase with clear examples makes it valuable for learning."
+      },
+      "security_posture": {
+        "score": 7.2,
+        "rating": "Good",
+        "reasoning": "Security best practices are followed with regular dependency updates and vulnerability scanning."
+      }
+    }
+  },
+  "recommendations": {
+    "risk_assessment": {
+      "security_risk": {
+        "level": "Unknown",
+        "description": "No significant security risks identified"
+      },
+      "adoption_risk": {
+        "level": "Unknown",
+        "description": "Overall risk level based on 0 factors"
+      }
+    },
+    "improvements": [
+      {
+        "title": "Increase test coverage",
+        "description": "Improve reliability through comprehensive testing"
+      },
+      {
+        "title": "Add code documentation",
+        "description": "Add more inline code documentation and examples"
+      },
+      {
+        "title": "Security scanning",
+        "description": "Implement automated security scanning"
+      },
+      {
+        "title": "Contribution guidelines",
+        "description": "Establish clear contribution guidelines"
+      }
+    ],
+    "final_verdict": {
+      "verdict": "Poor",
+      "summary": "This repository has quality concerns and requires improvement before adoption.",
+      "overall_score": 3.4
+    }
+  },
+  "report_metadata": {
+    "generated_by": "RepoRank",
+    "powered_by": "DSPy with LLM-as-Judge evaluation",
+    "report_version": "1.0",
+    "analysis_date": "2025-11-18T13:06:23.271378"
+  }
+}
