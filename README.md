@@ -9,7 +9,7 @@
       - [Alternative Models](#alternative-models)
         - [OpenAI](#openai)
         - [Anthropic](#anthropic)
-  - [Chapter wise Code and Description](#notes)
+  - [Chapter wise Code and Description](#chapter-wise-code-and-description)
 <!-- /TOC -->
 
 ## Setup
