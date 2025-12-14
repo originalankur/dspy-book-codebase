@@ -153,8 +153,19 @@ For model names and specifications, refer to:
   - [example-3-fastmcp-server.py](chapter-05/example-3-fastmcp-server.py): Creating a fast MCP server.
   - [example-3-fastmcp-client.py](chapter-05/example-3-fastmcp-client.py): Client for the fast MCP server.
 - [Chapter 7](chapter-07/): MLflow Integration Examples
-  - [Chapter 7 README](chapter-07/README.md): Contains setup instructions for MLflow server and examples of:
-    - [Basic QA MLflow Integration](chapter-07/example-1-basic-qa-mlflow-integration.py)
-    - [Prompt Registry with MLflow](chapter-07/example-2-prompt-registry.py)
-    - [Tweet Generator with MLflow Experiment Tracking](chapter-07/example-3-tweet-generator.py)
-
+  - [Chapter 7 README](chapter-07/README.md): Chapter-specific notes on MLflow setup, running the server, and expected outputs.
+  - [example-1-basic-qa-mlflow-integration.py](chapter-07/example-1-basic-qa-mlflow-integration.py): Basic example showing how to enable MLflow autologging with DSPy.
+  - [example-2-prompt-registry.py](chapter-07/example-2-prompt-registry.py): Demonstrates how to register and version prompt templates using MLflow.
+  - [example-3-tweet-generator.py](chapter-07/example-3-tweet-generator.py): Comprehensive example of a tweet generator with experiment tracking, custom metrics logging, and trace analysis.
+- [Chapter 8](chapter-08/): RAG and Vector Databases
+  - [Chapter 8 README](chapter-08/README.md): Instructions for setting up Weaviate local server and prerequisites.
+  - [example-1-token_embeddings_vector.py](chapter-08/example-1-token_embeddings_vector.py): Demonstrates tokenization and embedding generation using bert-base-uncased.
+  - [example-2-toy-vector-search.py](chapter-08/example-2-toy-vector-search.py): A simple vector search example using TF-IDF and cosine similarity.
+  - [example-3-dspy-rag.py](chapter-08/example-3-dspy-rag.py): Basic RAG implementation using DSPy `Retrieve` and `ChainOfThought`.
+  - [example-4-weaviate-basic.py](chapter-08/example-4-weaviate-basic.py): Connecting to Weaviate and creating a basic `FinancialNews` collection with semantic search.
+  - [example-5-weaviate-create-collection.py](chapter-08/example-5-weaviate-create-collection.py): Script to create the `FinancialQA` collection in Weaviate.
+  - [example-6-weaviate-import-batch.py](chapter-08/example-6-weaviate-import-batch.py): Efficiently batch importing data from CSV into Weaviate.
+  - [example-7-weaviate-query.py](chapter-08/example-7-weaviate-query.py): Demonstrates BM25, Vector, Hybrid, and Filtered searches in Weaviate.
+  - [example-8-llm-as-a-query-router.py](chapter-08/example-8-llm-as-a-query-router.py): Implementation of a query router using an LLM to decompose complex queries.
+  - [example-8-weavite-rag.py](chapter-08/example-8-weavite-rag.py): Using Weaviate's native Generative Search (RAG) capabilities with `near_text`.
+  - [example-9-re-ranker-hybrid.py](chapter-08/example-9-re-ranker-hybrid.py): Advanced RAG system with Hybrid Retrieval and a custom DSPy Listwise Reranker.
