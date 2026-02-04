@@ -1,0 +1,33 @@
+OPTIMIZED DENIAL LETTER
+Customer: John Doe
+Score: 0.75
+============================================================
+
+[Your Insurance Company Letterhead]
+
+[Date]
+
+John Doe
+[Customer Address]
+
+**Subject: Claim Denial – Policy Number [Policy Number]**
+
+Dear Mr. Doe,
+
+This letter is to inform you of the decision regarding your recent claim for water damage at your property located at [Property Address], filed on [Date of Claim]. We have carefully reviewed the details of your claim, along with the findings of our investigation.
+
+You reported basement flooding allegedly caused by a burst pipe. However, our investigation indicates that the water damage was primarily a result of ground saturation and seepage into your basement.
+
+Your homeowner's insurance policy, number [Policy Number], includes specific exclusions regarding water damage. Specifically, the policy states: "We do not cover loss caused by water below the surface of the ground, including water which exerts pressure on or flows, seeps or leaks through a building, sidewalk, driveway, foundation, swimming pool or other structure."
+
+Based on the findings of our investigation and the aforementioned policy exclusion, we must respectfully deny your claim. The damage appears to be the result of ground saturation, which is explicitly excluded from coverage under your policy.
+
+We understand that this is likely disappointing news. We encourage you to review your policy documents for a complete understanding of your coverage.
+
+If you have any questions or require further clarification, please do not hesitate to contact me directly at [Your Phone Number] or [Your Email Address].
+
+Sincerely,
+
+[Your Name]
+Claims Adjuster
+[Your Insurance Company]

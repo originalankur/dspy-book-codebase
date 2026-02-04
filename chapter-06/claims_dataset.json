@@ -1,0 +1,42 @@
+[
+    {
+        "claim_id": "CLM-001",
+        "customer_name": "John Doe",
+        "policy_section": "Section 4.B (Water Damage)",
+        "claim_details": "Customer filed for basement flooding caused by a burst pipe. Policy explicitly excludes 'standing water from ground saturation'.",
+        "denial_reason": "The damage was caused by ground saturation (seepage), not sudden pipe burst.",
+        "policy_text": "We do not cover loss caused by water below the surface of the ground, including water which exerts pressure on or flows, seeps or leaks through a building, sidewalk, driveway, foundation, swimming pool or other structure."
+    },
+    {
+        "claim_id": "CLM-002",
+        "customer_name": "Sarah Smith",
+        "policy_section": "Section 9.A (Wear and Tear)",
+        "claim_details": "Customer claimed roof damage after a storm. Inspector found the shingles were 25 years old and deteriorated naturally, not from wind.",
+        "denial_reason": "Damage is due to age/wear and tear, not a specific storm event.",
+        "policy_text": "We do not insure for loss caused by: Wear and tear, marring, deterioration, hidden or latent defect or any quality in property that causes it to damage or destroy itself."
+    },
+    {
+        "claim_id": "CLM-003",
+        "customer_name": "Mike Ross",
+        "policy_section": "Section 12.C (Modifications)",
+        "claim_details": "Customer installed a turbocharger on their sedan which caused engine failure. The policy covers stock parts only.",
+        "denial_reason": "Unapproved aftermarket modification caused the failure.",
+        "policy_text": "Coverage is excluded for any vehicle that has been modified, customized, or altered in any way that increases performance beyond manufacturer specifications."
+    },
+    {
+        "claim_id": "CLM-004",
+        "customer_name": "Emily Blunt",
+        "policy_section": "Section 2.F (Business Use)",
+        "claim_details": "Accident occurred while delivering pizzas. Personal auto policy excludes commercial use.",
+        "denial_reason": "Vehicle was being used for commercial delivery at time of accident.",
+        "policy_text": "We do not provide Liability Coverage for any 'insured' for that 'insured's' liability arising out of the ownership or operation of a vehicle while it is being used as a public or livery conveyance."
+    },
+    {
+        "claim_id": "CLM-005",
+        "customer_name": "David Kim",
+        "policy_section": "Section 5.D (Negligence)",
+        "claim_details": "Customer left keys in ignition with doors unlocked at a gas station. Car was stolen.",
+        "denial_reason": "Failure to secure vehicle (gross negligence).",
+        "policy_text": "We will not pay for loss or damage resulting from theft if the keys or keyless entry device were left in or on the covered vehicle while unattended."
+    }
+]

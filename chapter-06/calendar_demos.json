@@ -1,0 +1,66 @@
+[
+  {
+    "user_command": "Book a meeting with Sarah next Tuesday at 2 PM",
+    "api_payload": "{\"summary\": \"Meeting with Sarah\", \"start_time\": \"2023-10-24T14:00:00\", \"duration_minutes\": 60, \"attendees\": [\"sarah@example.com\"]}"
+  },
+  {
+    "user_command": "Block out lunch for me tomorrow at noon",
+    "api_payload": "{\"summary\": \"Lunch\", \"start_time\": \"2023-10-18T12:00:00\", \"duration_minutes\": 60, \"attendees\": []}"
+  },
+  {
+    "user_command": "Urgent sync with Engineering team right now",
+    "api_payload": "{\"summary\": \"Urgent Sync\", \"start_time\": \"2023-10-17T10:35:00\", \"duration_minutes\": 30, \"attendees\": [\"engineering@example.com\"]}"
+  },
+  {
+    "user_command": "Daily standup every weekday at 9am",
+    "api_payload": "{\"summary\": \"Daily Standup\", \"start_time\": \"2023-10-18T09:00:00\", \"recurrence\": \"DAILY_WEEKDAY\", \"duration_minutes\": 15}"
+  },
+  {
+    "user_command": "Reminder to call mom in 20 mins",
+    "api_payload": "{\"summary\": \"Call Mom\", \"start_time\": \"2023-10-17T10:55:00\", \"duration_minutes\": 15, \"attendees\": []}"
+  },
+  {
+    "user_command": "Schedule a 1-on-1 with Mike on Friday 4pm",
+    "api_payload": "{\"summary\": \"1-on-1 with Mike\", \"start_time\": \"2023-10-20T16:00:00\", \"duration_minutes\": 30, \"attendees\": [\"mike@example.com\"]}"
+  },
+  {
+    "user_command": "Hold 2 hours for deep work starting 9am Monday",
+    "api_payload": "{\"summary\": \"Deep Work\", \"start_time\": \"2023-10-23T09:00:00\", \"duration_minutes\": 120, \"attendees\": []}"
+  },
+  {
+    "user_command": "Dentist appointment Dec 5th 10am",
+    "api_payload": "{\"summary\": \"Dentist Appointment\", \"start_time\": \"2023-12-05T10:00:00\", \"duration_minutes\": 60, \"attendees\": []}"
+  },
+  {
+    "user_command": "Team happy hour 5pm this Friday",
+    "api_payload": "{\"summary\": \"Team Happy Hour\", \"start_time\": \"2023-10-20T17:00:00\", \"duration_minutes\": 120, \"attendees\": [\"team@example.com\"]}"
+  },
+  {
+    "user_command": "New event: Project Kickoff, 2pm tomorrow, add Design team",
+    "api_payload": "{\"summary\": \"Project Kickoff\", \"start_time\": \"2023-10-18T14:00:00\", \"duration_minutes\": 60, \"attendees\": [\"design@example.com\"]}"
+  },
+  {
+    "user_command": "Quick chat with John in 5 mins",
+    "api_payload": "{\"summary\": \"Quick Chat\", \"start_time\": \"2023-10-17T10:40:00\", \"duration_minutes\": 15, \"attendees\": [\"john@example.com\"]}"
+  },
+  {
+    "user_command": "Workshop 1pm to 5pm next Wed",
+    "api_payload": "{\"summary\": \"Workshop\", \"start_time\": \"2023-10-25T13:00:00\", \"duration_minutes\": 240, \"attendees\": []}"
+  },
+  {
+    "user_command": "Flight to NYC departs 7am Saturday",
+    "api_payload": "{\"summary\": \"Flight to NYC\", \"start_time\": \"2023-10-21T07:00:00\", \"duration_minutes\": 0, \"attendees\": []}"
+  },
+  {
+    "user_command": "Doctor follow-up Jan 10 3pm",
+    "api_payload": "{\"summary\": \"Doctor Follow-up\", \"start_time\": \"2024-01-10T15:00:00\", \"duration_minutes\": 45, \"attendees\": []}"
+  },
+  {
+    "user_command": "Prepare Q3 slides Monday morning",
+    "api_payload": "{\"summary\": \"Prepare Q3 Slides\", \"start_time\": \"2023-10-23T09:00:00\", \"duration_minutes\": 60, \"attendees\": []}"
+  },
+  {
+    "user_command": "Gym 6pm tonight",
+    "api_payload": "{\"summary\": \"Gym\", \"start_time\": \"2023-10-17T18:00:00\", \"duration_minutes\": 60, \"attendees\": []}"
+  }
+]

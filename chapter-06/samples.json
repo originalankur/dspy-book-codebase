@@ -1,0 +1,42 @@
+[
+  {
+    "note": "Patient presents with type 2 diabetes and foot ulcer on left heel. Prescribed insulin.",
+    "code": "E11.621"
+  },
+  {
+    "note": "Acute myocardial infarction of anterior wall, first occurrence. Patient stable post-catheterization.",
+    "code": "I21.09"
+  },
+  {
+    "note": "Major depressive disorder, recurrent episode, severe without psychotic features. Started on sertraline.",
+    "code": "F33.2"
+  },
+  {
+    "note": "Chronic obstructive pulmonary disease with acute exacerbation. Admitted for nebulizer treatments.",
+    "code": "J44.1"
+  },
+  {
+    "note": "Essential hypertension with chronic kidney disease stage 3. Creatinine elevated at 2.1.",
+    "code": "I12.9"
+  },
+  {
+    "note": "Pneumonia due to Streptococcus pneumoniae, confirmed by culture. Patient febrile.",
+    "code": "J13"
+  },
+  {
+    "note": "Closed fracture of distal radius, right arm. Fall from bicycle. No displacement seen on X-ray.",
+    "code": "S52.501A"
+  },
+  {
+    "note": "Gastroesophageal reflux disease with esophagitis. Endoscopy shows grade B inflammation.",
+    "code": "K21.0"
+  },
+  {
+    "note": "Migraine without aura, intractable. Patient reports 15+ headache days per month.",
+    "code": "G43.019"
+  },
+  {
+    "note": "Atrial fibrillation, persistent. Patient on warfarin with INR of 2.3. No symptoms of stroke.",
+    "code": "I48.1"
+  }
+]
