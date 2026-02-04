@@ -123,7 +123,7 @@ def main():
     
     teleprompter = MIPROv2(
         metric=empathy_compliance_metric,
-        auto="light", 
+        auto="medium", 
         num_threads=4,
         max_errors=10,
         verbose=True,
@@ -145,7 +145,7 @@ def main():
     
     print_rule("QUALITATIVE COMPARISON")
     
-    example = devset[0]
+    example = devset[2]
     pred_old = initial_program(**example.inputs())
     pred_new = optimized_program(**example.inputs())
     
