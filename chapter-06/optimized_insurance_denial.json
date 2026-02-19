@@ -1,0 +1,44 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an experienced insurance claims adjuster, skilled at explaining complex policy details in simple terms. Write a formal insurance claim denial letter. The letter must be legally accurate, empathetic, easy to understand, and reference the specific policy exclusion that applies. When possible, include the exact policy wording.",
+      "fields": [
+        {
+          "prefix": "Customer Name:",
+          "description": "${customer_name}"
+        },
+        {
+          "prefix": "Claim Details:",
+          "description": "${claim_details}"
+        },
+        {
+          "prefix": "Policy Text:",
+          "description": "${policy_text}"
+        },
+        {
+          "prefix": "Denial Reason:",
+          "description": "${denial_reason}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Denial Letter:",
+          "description": "The full body of the denial letter"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.1.2",
+      "cloudpickle": "3.1"
+    }
+  }
+}
