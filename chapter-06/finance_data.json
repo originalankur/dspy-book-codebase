@@ -1,0 +1,122 @@
+[
+    {
+        "id": 0,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 1,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. [Analyst interruption]: Sorry, can you repeat that? ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 2,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 3,
+        "category": "Executive Departure/instability",
+        "transcript": "CFO: Revenue is up 4%. On a side note, our Head of R&D has decided to pursue personal interests, effective immediately. We have full confidence in the existing junior team to manage the pipeline. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. Unexpected loss of key R&D leadership. 2. Potential disruption in drug development pipeline. 3. Low confidence in 'junior' replacement team."
+    },
+    {
+        "id": 4,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 5,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 6,
+        "category": "Executive Departure/instability",
+        "transcript": "CFO: Revenue is up 4%. On a side note, our Head of R&D has decided to pursue personal interests, effective immediately. We have full confidence in the existing junior team to manage the pipeline. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Unexpected loss of key R&D leadership. 2. Potential disruption in drug development pipeline. 3. Low confidence in 'junior' replacement team."
+    },
+    {
+        "id": 7,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. [Analyst interruption]: Sorry, can you repeat that? ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 8,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 9,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. [Analyst interruption]: Sorry, can you repeat that? ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 10,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 11,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 12,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. [Analyst interruption]: Sorry, can you repeat that? ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 13,
+        "category": "Hidden Liquidity Risk",
+        "transcript": "CEO: While our Tier 1 capital remains within regulatory thresholds, we are optimizing our liquidity buffers in response to idiosyncratic market dynamics. Some might call it a contraction; we call it surgical capital allocation. [Analyst interruption]: Sorry, can you repeat that? ",
+        "risk_summary": "1. Tier 1 capital nearing minimum thresholds. 2. Obfuscation of declining liquidity via 'surgical' jargon. 3. Risk of credit rating downgrade."
+    },
+    {
+        "id": 14,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 15,
+        "category": "Evasive Product Delay",
+        "transcript": "CFO: The rollout of Gen-3 is ongoing. We are perfectly aligned with our partners, though the external ecosystem's readiness is a variable we are navigating with extreme diligence. Timelines are fluid but constructive. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. Significant delay in Gen-3 product rollout. 2. Management shifting blame to 'external ecosystem'. 3. Uncertainty in future revenue guidance."
+    },
+    {
+        "id": 16,
+        "category": "Over-Confident M&A",
+        "transcript": "CEO: The synergies from the GlobalCorp acquisition are essentially guaranteed. We don't see any integration hurdles. The 40% premium we paid is a steal given the massive, inevitable tailwinds in this sector. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. High risk of overpayment (40% premium). 2. Management overconfidence regarding 'guaranteed' synergies. 3. Lack of concrete integration plan."
+    },
+    {
+        "id": 17,
+        "category": "Over-Confident M&A",
+        "transcript": "CEO: The synergies from the GlobalCorp acquisition are essentially guaranteed. We don't see any integration hurdles. The 40% premium we paid is a steal given the massive, inevitable tailwinds in this sector. I think we've been very clear on this in the past. ",
+        "risk_summary": "1. High risk of overpayment (40% premium). 2. Management overconfidence regarding 'guaranteed' synergies. 3. Lack of concrete integration plan."
+    },
+    {
+        "id": 18,
+        "category": "Executive Departure/instability",
+        "transcript": "CFO: Revenue is up 4%. On a side note, our Head of R&D has decided to pursue personal interests, effective immediately. We have full confidence in the existing junior team to manage the pipeline. Um, as we look at the spreadsheet... ",
+        "risk_summary": "1. Unexpected loss of key R&D leadership. 2. Potential disruption in drug development pipeline. 3. Low confidence in 'junior' replacement team."
+    },
+    {
+        "id": 19,
+        "category": "Executive Departure/instability",
+        "transcript": "CFO: Revenue is up 4%. On a side note, our Head of R&D has decided to pursue personal interests, effective immediately. We have full confidence in the existing junior team to manage the pipeline. [Analyst interruption]: Sorry, can you repeat that? ",
+        "risk_summary": "1. Unexpected loss of key R&D leadership. 2. Potential disruption in drug development pipeline. 3. Low confidence in 'junior' replacement team."
+    }
+]

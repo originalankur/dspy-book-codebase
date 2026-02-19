@@ -1,0 +1,276 @@
+{
+    "train": [
+        {
+            "alert_type": "structuring",
+            "transaction_logs": "3/01: $9,000 cash dep. 3/02: $9,500 cash dep. 3/04: $8,000 cash dep. All at different branches.",
+            "customer_profile": "Owner of 'Main St Deli'. Avg monthly deposits usually $15k. This week: $26.5k.",
+            "sar_narrative": "\nRegarding Customer 'Main St Deli', an investigation identified potential structuring activity.\nBetween Mar 1 and Mar 4, the customer made three cash deposits totaling $26,500.\nSpecifically:\n- $9,000 on 3/01 at Branch A\n- $9,500 on 3/02 at Branch B\n- $8,000 on 3/04 at Branch C\n\nThis activity is suspicious because the deposits were made in amounts consistently just below the $10,000 CTR reporting threshold. \nFurthermore, the use of multiple branches suggests an intent to evade reporting requirements. \nThe total volume ($26,500) significantly exceeds the customer's historical average of $15,000/month. \nNo apparent lawful business purpose was identified for this spike in cash volume.\n"
+        },
+        {
+            "alert_type": "layering",
+            "transaction_logs": "4/10: Wire In $250k from 'Global Tech Sols' (BVI). 4/11: Wire Out $249,800 to 'Alpha Holdings' (Seychelles).",
+            "customer_profile": "Business 'Data Consulting' inc 2 months ago. No website found. Sole proprietor.",
+            "sar_narrative": "\nThe customer 'Data Consulting' is flagged for potential layering activity.\nOn April 10, the account received a wire of $250,000 from 'Global Tech Sols' in the British Virgin Islands.\nThe very next day, April 11, $249,800 was wired out to 'Alpha Holdings' in Seychelles, leaving a nominal balance.\n\nThis pass-through activity is highly suspicious for the following reasons:\n1. The use of shell-like entities in secrecy jurisdictions (BVI, Seychelles).\n2. The rapid velocity of funds with no clear economic purpose for the entity to hold the cash.\n3. The lack of an established online presence for a 'Tech Consulting' firm, suggesting it may be a shell company used to layer illicit funds.\n"
+        },
+        {
+            "alert_type": "money_mule",
+            "transaction_logs": "5/01: Incoming wire $12,000 (Subject: 'Equipment'). 5/02: Cash withdrawal $11,500.",
+            "customer_profile": "Student, age 19. Account created 3 years ago. Avg balance $200. No history of large tx.",
+            "sar_narrative": "\nAn investigation into Customer [Name], a 19-year-old student, indicates potential money mule activity.\nOn May 1, the customer received an incoming wire of $12,000 labeled 'Equipment', which is inconsistent with their profile and history.\nWithin 24 hours (May 2), the customer withdrew $11,500 in cash, effectively depleting the funds.\n\nThis pattern is indicative of a 'money mule' scheme, where an individual allows their account to be used to move illicit funds. \nThe sudden influx of funds followed by an immediate cash exit is classic placement behavior. \nThe customer's age and lack of business history make the 'Equipment' explanation implausible.\n"
+        },
+        {
+            "alert_type": "trade_based_ml",
+            "transaction_logs": "Multiple wires to 'Textile Co' (Country X). Inv #101: $450,000 for 'Cotton Shirts'. Market rate ~$50k.",
+            "customer_profile": "Import/Export LLC. Established 5 years. Usually deals in electronics, recently switched to textiles.",
+            "sar_narrative": "\nSuspicious activity related to Trade-Based Money Laundering (TBML) was detected for 'Import/Export LLC'.\nThe customer initiated multiple wires totaling $450,000 to 'Textile Co' in a high-risk jurisdiction for a shipment of 'Cotton Shirts'.\nAnalysis indicates the value of these goods at market rates is approximately $50,000, suggesting a massive over-invoicing scheme.\n\nOver-invoicing is a common method to move value across borders illicitly.\nFurthermore, the sudden shift from electronics to textiles without a clear business rationale adds to the suspicion.\nThis transaction appears to be an attempt to justify the transfer of illicit wealth under the guise of legitimate trade.\n"
+        },
+        {
+            "alert_type": "elder_exploitation",
+            "transaction_logs": "6/15: $25,000 Wire to 'Global Sweepstakes' (Jamaica). 6/16: $15,000 Wire to 'John Doe' (unrelated).",
+            "customer_profile": "Joint account: Husband (82), Wife (80). Fixed pension income. Consistent spending for 20 years. Recently added 'nephew' to account.",
+            "sar_narrative": "\nPotential Elder Financial Exploitation has been identified for customers [Name], aged 82 and 80.\nOn June 15, a $25,000 wire was sent to 'Global Sweepstakes' in Jamaica, a known hub for lottery scams.\nThis was followed by a $15,000 wire to an unrelated individual, 'John Doe', on June 16.\n\nThese transactions are highly irregular given the customers' 20-year history of conservative spending and fixed pension income.\nThe recent addition of a 'nephew' to the account, followed immediately by these large outflows, suggests coercion or fraud.\nThe 'lottery' payment is a red flag for advance-fee fraud targeting vulnerable seniors.\n"
+        },
+        {
+            "alert_type": "human_trafficking",
+            "transaction_logs": "Daily cash deps ~$500-$800 appearing 2am-4am via ATM. Outflows: Hotels, Airlines, 'Adult Services' sites.",
+            "customer_profile": "Personal account. Occupation: 'Freelance'. High velocity of cash in/out. No utility/rent payments seen.",
+            "sar_narrative": "\nThe account activity for customer [Name] exhibits typologies consistent with Human Trafficking.\nDeposits consist almost entirely of cash, occurring daily between 2 AM and 4 AM at various ATMs.\nOutflows are dominated by payments to local hotels, airlines, and known adult service advertising platforms.\n\nNotable indicators include:\n1. Timing of deposits (late night/early morning) consistent with illicit nightlife activity.\n2. Lack of normal living expenses (rent, utilities, grocery) suggesting the individual may not be in control of their own finances.\n3. Funneling of cash into travel and accommodation expenses often associated with moving victims.\n"
+        },
+        {
+            "alert_type": "crypto_structuring",
+            "transaction_logs": "7/01: $2,500 Zelle in. 7/01: $2,500 Coinbase out. 7/02: $2,900 Venmo in. 7/02: $2,900 BINANCE out.",
+            "customer_profile": "Unemployed. High volume of P2P transfers in, immediate crypto purchases out.",
+            "sar_narrative": "\nCustomer activity suggests the use of the account as a pass-through for cryptocurrency laundering.\nOn July 1 and July 2, the customer received P2P transfers (Zelle, Venmo) totaling $5,400.\nIn each instance, the funds were immediately transferred to cryptocurrency exchanges (Coinbase, Binance).\n\nThis pattern indicates the account is acting as a fiat on-ramp for illicit funds.\nThe source of funds (P2P) is opaque, and the immediate exit to crypto assets suggests an intent to obscure the audit trail (layering). \nThe structuring of amounts into smaller, irregular values avoids immediate detection filters.\n"
+        },
+        {
+            "alert_type": "tax_evasion",
+            "transaction_logs": "Recurring cash deposits of exactly $9,900 monthly. Payments to 'Luxury Cars Ltd' and 'Resort Stay'.",
+            "customer_profile": "Owner 'Consulting Firm'. Business account. No payroll visible. Low reported income on KYC.",
+            "sar_narrative": "\nActivity indicative of tax evasion and structuring was observed for 'Consulting Firm'.\nThe account shows recurring cash deposits of exactly $9,900, strategically placed just under the $10,000 reporting threshold.\nFunds are subsequently used for high-value personal luxuries, such as payments to 'Luxury Cars Ltd' and resorts.\n\nThere is a significant discrepancy between this lifestyle spending and the low reported income on the KYC profile.\nThe lack of payroll or standard business expenses suggests the 'Consulting Firm' may be a shell used to commingle personal and hidden business revenue.\n"
+        },
+        {
+            "alert_type": "terrorist_financing",
+            "transaction_logs": "Weekly wires ~$300-$500 to individuals in Syrian border region. Description: 'Family Support'.",
+            "customer_profile": "Warehouse worker. Income $35k/yr. Sending ~40% of income abroad.",
+            "sar_narrative": "\nSuspicious wire transfers raising Terrorist Financing concerns were identified.\nThe customer, a warehouse worker earning $35k/year, is remitting approximately 40% of their total income abroad.\nThe funds are sent in small, weekly amounts ($300-$500) to various individuals in high-risk regions near the Syrian border.\n\nWhile labeled 'Family Support', the volume (relative to income) and the destination (known conflict zone border) are high-risk indicators.\nStructured small remittances are a common method to fund illicit groups while avoiding scrutiny.\nThe flow of funds is inconsistent with the customer's known financial capacity.\n"
+        },
+        {
+            "alert_type": "shell_company",
+            "transaction_logs": "In: $1M Wire from 'Big Corp'. Out: 10 Wires of $100k to various 'Consulting' LLCs with residential addresses.",
+            "customer_profile": "Entity 'General Services'. Reg agent address. No operations apparent.",
+            "sar_narrative": "\nThe entity 'General Services' appears to be operating as a shell company facilitating layering.\nThe account received a single large wire of $1,000,000 from 'Big Corp'.\nAlmost immediately, the funds were dispersed in round $100,000 increments to ten different 'Consulting' LLCs.\n\nInvestigation reveals that the beneficiary LLCs are registered to residential addresses with no commercial footprint.\nThis pattern suggests 'General Services' is a layer designed to fragment large sums of money to obscure the ultimate beneficiaries.\nThe lack of operational expenses (rent, payroll) further confirms shell company status.\n"
+        },
+        {
+            "alert_type": "pep_corruption",
+            "transaction_logs": "Deps: $50k wire from 'Govt Contractor'. Wires out: $20k to 'Car Dealer', $30k to 'Travel'.",
+            "customer_profile": "Spouse of Foreign Minister (Country Y). Homemaker. No independent income source.",
+            "sar_narrative": "\nAccount activity involving a Politically Exposed Person (PEP) suggests potential proceeds of corruption.\nThe customer, identified as the spouse of the Foreign Minister of [Country Y], received a $50,000 wire from a known government contractor.\nThe funds were not used for business but were immediately spent on luxury vehicles and travel.\n\nGiven the customer's lack of independent income and the source of funds (a contractor likely seeking influence), there is a high risk of bribery or kickbacks.\nThe use of a family member's account to receive such funds is a common typology for concealing illicit payments to public officials.\n"
+        },
+        {
+            "alert_type": "structuring_money_orders",
+            "transaction_logs": "Purchases of Money Orders: $2,500, $2,500, $2,000 at different post offices on same day.",
+            "customer_profile": "Retail shop owner. Cash intensive business. No cash deposits into account, only MO deposits.",
+            "sar_narrative": "\nPotential structuring involving monetary instruments has been detected.\nThe customer was observed purchasing money orders in amounts of $2,500, $2,500, and $2,000 at three different post office locations on the same day.\nThese instruments were subsequently deposited into the business account.\n\nThis behavior appears designed to avoid the $3,000 record-keeping threshold for money order purchases.\nBy breaking the cash down into negotiable instruments below the identification limit, the customer obscures the cash source.\nThis is a classic 'smurfing' technique to place illicit cash into the banking system.\n"
+        },
+        {
+            "alert_type": "ponzi_scheme",
+            "transaction_logs": "In: 50 wires from individuals ($10k-$50k each). Out: Monthly 'Interest' payments to earlier investors.",
+            "customer_profile": "Investment 'Guru'. Unregistered security sales. Promise of 20% guaranteed returns.",
+            "sar_narrative": "\nThe account activity for 'Investment Guru' exhibits classic signs of a Ponzi scheme.\nThe account receives a high volume of incoming wires from diverse individual investors.\n outflows are predominantly 'Interest' payments to earlier investors, rather than legitimate investment activity.\n\nThere is no evidence of underlying trading or profit generation to support the promised '20% guaranteed returns'.\nThe pattern of paying old investors with new investor money is the definition of a Ponzi structure.\nThe rapid accumulation of funds from the public without regulatory registration poses significant fraud risk.\n"
+        },
+        {
+            "alert_type": "real_estate_laundering",
+            "transaction_logs": "Dep: $400k cash/cashier checks over 3 months. Wire Out: $400k to 'Title Company' for property purchase.",
+            "customer_profile": "Real Estate Agent. Income usually commission based. Large unexplained cash influx.",
+            "sar_narrative": "\nSuspicion of money laundering via real estate integration.\nOver a 3-month period, the customer deposited $400,000 via cash and cashier's checks, a volume inconsistent with their profile as an agent.\nThese funds were then aggregated and wired to a 'Title Company' for the purchase of a property.\n\nThe use of structured cash deposits to fund a large real estate transaction suggests the integration of illicit funds into physical assets.\nReal estate is a high-risk sector for laundering due to the ability to hold high value anonymously.\nThe customer appears to be using the property purchase to legitimize unclean cash.\n"
+        },
+        {
+            "alert_type": "identity_theft",
+            "transaction_logs": "Pattern change: Login from new IP (Nigeria). Wire: $15,000 to new beneficiary. Balance drained.",
+            "customer_profile": "Elderly. Static IP usage for 5 years. Checking account usually stable.",
+            "sar_narrative": "\nAccount Takeover (ATO) and Identity Theft suspected.\nThe customer's account, which has had a stable history and static IP usage for 5 years, showed a sudden login from a new IP address in Nigeria.\nFollowing this access, a $15,000 wire was initiated to a previously unknown beneficiary, draining the account.\n\nThis drastic deviation from historical patterns, combined with the foreign IP access, indicates the customer's credentials were likely compromised.\nThe speed of the depletion suggests a fraudster attempting to extract maximum value before detection.\n"
+        },
+        {
+            "alert_type": "casino_structuring",
+            "transaction_logs": "Casino Redemption Checks deposited: $8,000, $9,000. No corresponding Debit Card alerts at casino.",
+            "customer_profile": "Self-employed. Frequent trips to Las Vegas.",
+            "sar_narrative": "\nActivity suggests laundering via casino chips.\nThe customer deposited two redemption checks from a casino totaling $17,000.\nHowever, review of the account shows no corresponding withdrawals or debit usage at the casino to fund this gambling.\n\nThis discrepancy suggests the customer brought illicit cash into the casino, purchased chips, engaged in minimal or no play, and cashed out via check.\nUsing a casino to convert dirty cash into a 'clean' casino check is a known laundering typology.\nThe separate checks also appear structured to avoid attention.\n"
+        },
+        {
+            "alert_type": "healthcare_fraud",
+            "transaction_logs": "In: Medicare payments $200k/mo. Out: Checks to 'Medical Supply Co' (shell) and cash withdrawals.",
+            "customer_profile": "Dr. Office. Single practitioner. Medicaid billings exceed physical capacity of one doctor.",
+            "sar_narrative": "\nSigns of Healthcare Fraud and Embezzlement.\nThe account receives $200,000/month in Medicare payments, a volume that exceeds the plausible capacity of a single-practitioner office.\nFunds are rapidly dissipated via checks to 'Medical Supply Co' (which appears to be a shell entity with no footprint) and large cash withdrawals.\n\nThis circular movement of funds suggests the 'Medical Supply' payments are kickbacks or a method to extract fraud proceeds.\nThe discrepancy between billings and provider capacity is a primary indicator of phantom billing schemes.\n"
+        },
+        {
+            "alert_type": "tbml_vehicles",
+            "transaction_logs": "Wires In: From 'Auto Export' (Benin). Wires Out: To various used car auctions in US.",
+            "customer_profile": "Used Car Dealer. High volume export to West Africa.",
+            "sar_narrative": "\nThe customer 'Used Car Dealer' is suspected of involvement in Trade-Based Money Laundering (TBML) involving vehicle exports.\nThe account receives large wires from West Africa (e.g., Benin) and immediately forwards funds to US auto auctions.\nWhile consistent with business, the volume is disproportionate to the small scale of the dealership premises.\n\nWest Africa is a known destination for stolen or fraudulently financed vehicles.\nThe rapid pass-through of funds suggests the entity may be a front for moving value derived from vehicle trafficking or narcotics proceeds disguised as auto trade.\n"
+        },
+        {
+            "alert_type": "sanctions_evasion",
+            "transaction_logs": "Wire: $1.5M to 'General Trading LLC' (Dubai). Invoice Ref: 'Machine Parts - destination THR'.",
+            "customer_profile": "Industrial Supplier. Dealing with dual-use goods.",
+            "sar_narrative": "\nPotential Sanctions Evasion detected involving dual-use goods.\nThe customer wired $1.5 million to 'General Trading LLC' in Dubai.\nThe invoice reference 'destination THR' strongly implies Tehran, Iran, a sanctioned jurisdiction.\n\nSanctions evaders often use transshipment hubs like Dubai to obscure the final destination of prohibited goods.\nThe combination of dual-use industrial equipment and a reference linking to a sanctioned country constitutes a severe violation risk.\nThis transaction appears to circumvent OFAC regulations.\n"
+        },
+        {
+            "alert_type": "virtual_currency_gaming",
+            "transaction_logs": "In: PayPal $50k/mo from hundreds of users. Out: Crypto exchange purchases.",
+            "customer_profile": "Student. Claims 'Gaming items trading'.",
+            "sar_narrative": "\nSuspicious activity involving virtual assets and potential money laundering.\nThe customer receives approximately $50,000/month via PayPal from hundreds of unrelated individuals.\nFunds are immediately consolidated and moved to cryptocurrency exchanges.\n\nThe customer claims to trade 'gaming items', but the volume is excessive for a casual player.\nThis pattern mimics 'micro-laundering' or the sale of illicit digital goods (stolen accounts, credit cards) in gaming marketplaces.\nThe use of crypto as the exit path further obscures the ultimate beneficiary.\n"
+        },
+        {
+            "alert_type": "drug_front_business",
+            "transaction_logs": "Cash Dep: $40k/week. Small bills ($20s). Night drop usage.",
+            "customer_profile": "Bar/Nightclub. Capacity 50 people. Open only Fri/Sat.",
+            "sar_narrative": "\nThe account for 'Nightclub' shows cash deposits inconsistent with its business model, suggesting it may be a front for drug trafficking.\nWeekly cash deposits average $40,000, primarily in small denominations ($20s).\nGiven the venue's small capacity (50 people) and limited operating hours (2 days/week), this revenue is implausible.\n\nThe use of night drops and small bills is consistent with the placement of street-level narcotics proceeds.\nThe business appears to be commingling illicit cash with legitimate bar revenue to sanitize the funds.\n"
+        },
+        {
+            "alert_type": "art_laundering",
+            "transaction_logs": "In: $2M Wire from Shell Co (Cayman). Out: $2M to 'Auction House' for 'Modern Painting'.",
+            "customer_profile": "Art Dealer. Private. No gallery.",
+            "sar_narrative": "\nHigh-value transaction flagged for potential Art Laundering.\nThe customer received a $2 million wire from a Cayman Islands shell company and immediately used it to purchase a 'Modern Painting'.\nThe art market is vulnerable to laundering due to subjective valuations and buyer anonymity.\n\nThe source of funds is opaque (offshore shell), and the immediate conversion into a high-value portable asset (art) effectively layers the money.\nThis transaction allows the beneficiary to hold wealth in a physical asset that can be moved or sold later with a 'clean' provenance.\n"
+        },
+        {
+            "alert_type": "non_profit_embezzlement",
+            "transaction_logs": "Withdrawals: cash at Casinos, payments to 'Luxury designers'. Source: 'Charity Donations'.",
+            "customer_profile": "Director of Non-Profit 'Save the Earth'.",
+            "sar_narrative": "\nMisuse of Non-Profit funds suspected (Embezzlement).\nThe account acts as the operating fund for 'Save the Earth' charity.\nHowever, transaction history shows significant spending at casinos and luxury designer stores, which is entirely inconsistent with the organization's mission.\n\nThe Director appears to be treating the charity account as a personal piggy bank.\nThis commingling of donor funds with personal luxury expenses is a clear indicator of embezzlement and fraud.\n"
+        },
+        {
+            "alert_type": "structuring_gas_station",
+            "transaction_logs": "30 cash deposits of $2,900 each over 5 days. Various ATMs.",
+            "customer_profile": "Gas Station Owner. High cash business.",
+            "sar_narrative": "\nSystematic structuring detected for Gas Station business account.\nOver a 5-day period, the customer made 30 separate cash deposits, each exactly $2,900.\nThe consistent use of this specific amount suggests an automated attempt to evade ATM deposit limits or internal bank monitoring thresholds.\n\nWhile gas stations are cash-intensive, the manner of deposit (high frequency, fixed sub-limit amounts) goes beyond normal cash management.\nThis 'smurfing' pattern indicates an intent to place large volumes of cash ($87,000 total) without triggering regulatory reporting.\n"
+        },
+        {
+            "alert_type": "funnel_account",
+            "transaction_logs": "Cash deposits in Miami, NY, LA ($5k each). Immediate wire out to Mexico.",
+            "customer_profile": "Personal Account. 'Consultant'. No geographic tie to deposit locations.",
+            "sar_narrative": "\nThe account appears to be functioning as a 'Funnel Account' for illicit flows.\nMultiple cash deposits of ~$5,000 were made on the same day in geographically distinct cities (Miami, NY, LA).\nThese funds were immediately consolidated and wired to a beneficiary in Mexico.\n\nThis topology is characteristic of drug trafficking organizations moving sales proceeds.\nThe 'Consultant' has no apparent business reason for such widespread cash collection.\nThe immediate wire to a high-risk jurisdiction for narcotics confirms the suspicion of cross-border laundering.\n"
+        }
+    ],
+    "val": [
+        {
+            "alert_type": "layering",
+            "transaction_logs": "Wire in: $500k from Shell Corp A (Panama). Same day: Wire out $500k to Shell Corp B (Cyprus).",
+            "customer_profile": "New account, opened 1 week ago. Stated business: 'Consulting'.",
+            "sar_narrative": "\nThe account is being reported for potential layering and pass-through activity.\nOn [Date], the customer received a wire transfer of $500,000 from Shell Corp A (located in Panama, a high-risk jurisdiction).\nOn the same day, the customer initiated an outgoing wire for the exact same amount ($500,000) to Shell Corp B in Cyprus.\n\nThis activity is suspicious as the account appears to be acting as a conduit for funds. \nThe immediate turnaround of funds (velocity of funds) allows for no clear economic purpose or accumulation of capital. \nAdditionally, the account was opened only one week prior, which is consistent with the use of 'burner' accounts for layering illicit funds.\n"
+        },
+        {
+            "alert_type": "structuring",
+            "transaction_logs": "Cash Dep: $9,800 on Mon. $9,800 on Wed. $9,700 on Fri.",
+            "customer_profile": "Hardware Store. Avg weekly sales $50k (mostly credit).",
+            "sar_narrative": "\nStructuring activity identified for 'Hardware Store'.\nThe customer made three large cash deposits ($9,800, $9,800, $9,700) within a single week.\nEach deposit was carefully calculated to remain just under the $10,000 CTR threshold.\n\nWhile the business generates revenue, the specific denomination of deposits suggests manual manipulation to avoid reporting.\nNormal business cash drops are usually irregular amounts reflecting actual sales, not round numbers hovering at the reporting limit.\nThis pattern indicates willful intent to evade government scrutiny.\n"
+        },
+        {
+            "alert_type": "ui_fraud_mule",
+            "transaction_logs": "In: 10 different state UI payments (names do not match acct holder). Out: Cash app transfers.",
+            "customer_profile": "Unemployed. Single accountholder.",
+            "sar_narrative": "\nPotential Unemployment Insurance (UI) fraud and mule activity.\nThe account received 10 separate UI benefit payments intended for different individuals, none of whom match the account holder's name.\nFunds were immediately dissipated via Cash App transfers.\n\nThis is a clear indicator of government benefits fraud.\nThe account holder is acting as a mule to collect stolen benefits.\nThe use of P2P apps to extract the funds makes recovery difficult for the state agencies.\n"
+        },
+        {
+            "alert_type": "tbml_under_invoicing",
+            "transaction_logs": "Export 'Heavy Machinery' to Country Z. Invoice Value $5,000. Market Value $150,000.",
+            "customer_profile": "Logistics Co. Shipping high value goods.",
+            "sar_narrative": "\nTrade-Based Money Laundering (TBML) suspected via under-invoicing.\nThe customer exported 'Heavy Machinery' to Country Z declared at a value of only $5,000.\nIndustry data suggests the fair market value for such machinery is closer to $150,000.\n\nBy massively under-valuing the expert, the customer is effectively transferring value to the importer off the books.\nThe recipient receives $150k worth of goods but only pays $5k officially.\nThe remaining value is likely settled via illicit side channels, effectively moving wealth across borders disguised as trade.\n"
+        },
+        {
+            "alert_type": "romance_scam",
+            "transaction_logs": "Wires: $10k to 'Fiance' in Nigeria, $5k to 'Doctor' for 'Fiance surgery'.",
+            "customer_profile": "Widow, age 75. Recently active on social media. No prior international activity.",
+            "sar_narrative": "\nCustomer appears to be the victim of a Romance Scam/Confidence Fraud.\nThe customer, an elderly widow, has initiated multiple wires totaling $15,000 to Nigeria.\nBeneficiaries include a purported 'Fiance' and a 'Doctor' for emergency surgery.\n\nThis narrative fits the classic romance scam script: grooming a victim online, establishing a relationship, and creating an emergency financial need.\nThe destination (Nigeria) is high-risk for this fraud typology.\nThe customer has no prior history of international ties, making these transactions highly anomalous.\n"
+        },
+        {
+            "alert_type": "human_trafficking_massage",
+            "transaction_logs": "High cash deposits. Payments: 'Rent-Residential Apts', 'Online Ads'. No payroll.",
+            "customer_profile": "Massage Parlor. Regisered as 'Therapy'.",
+            "sar_narrative": "\nActivity consistent with an illicit massage business/human trafficking.\nThe business operates effectively as cash-only with high deposit volumes but shows zero payroll expenses.\nInstead, outflows cover rent for multiple residential apartments (likely housing workers) and online classified ads.\n\nThe lack of payroll suggests workers are paid 'off the books' or are working under coercion.\nThe residential rents indicate the business controls the living quarters of its staff, a key indicator of trafficking.\n"
+        },
+        {
+            "alert_type": "crypto_mixing",
+            "transaction_logs": "Out: 10 ETH to Tornado Cash (Mixer). In: 9.8 ETH from unknown wallet.",
+            "customer_profile": "Software Developer. High net worth.",
+            "sar_narrative": "\nTransaction activity involving a cryptocurrency mixer raises AML concerns.\nThe customer transferred 10 ETH to Tornado Cash, a known mixing service used to obfuscate the source of funds.\nShortly after, 9.8 ETH was received from an unattributable wallet.\n\nThere is no legitimate business purpose for using a mixer, which breaks the on-chain link between sender and receiver.\nThis tool is frequently used by bad actors to wash proceeds of crime.\nThe use of such a service by a sophisticated user suggests an intent to hide the origin or destination of wealth.\n"
+        },
+        {
+            "alert_type": "tax_evasion_cash_wages",
+            "transaction_logs": "Large weekly cash withdrawals ($20k). No payroll tax payments.",
+            "customer_profile": "Boutique Clothing. 15 Employees.",
+            "sar_narrative": "\nSuspected Tax Evasion and off-the-books payroll.\nThe customer withdraws ~$20,000 in cash weekly, coinciding with typical pay periods.\nHowever, there are no corresponding payroll tax debits or checks to payroll processors.\n\nThis pattern strongly suggests the business is paying its 15 employees in cash to avoid employment taxes.\nThis not only defrauds the government of revenue but also facilitates an unreported cash economy.\nThe scale of withdrawals aligns with the estimated wage bill, confirming the suspicion.\n"
+        },
+        {
+            "alert_type": "ngo_terror_financing",
+            "transaction_logs": "Donations In. Wires Out: To 'Relief Committes' in controlled conflict zones. No audits.",
+            "customer_profile": "NGO 'Rights for All'. Recently formed.",
+            "sar_narrative": "\nPotential Terrorist Financing abuse within the Non-Profit sector.\nThe NGO receives varied donations and rapidly wires funds to opaque 'Relief Committees' located in active conflict zones controlled by designated terrorist groups.\nThe entity lacks standard governance or audit trails.\n\nThe risk is that these funds, ostensibly for aid, are being diverted to support militant activities.\nThe beneficiaries are unverified entities in jurisdictions where standard banking controls are absent.\nThis creates a high probability of funds diversion.\n"
+        },
+        {
+            "alert_type": "shell_company_consulting",
+            "transaction_logs": "In: $2M from multiple sources. Out: $1.9M to offshore accounts. Bal: $0.",
+            "customer_profile": "Consulting LLC. Reg agent address. No employees. No website.",
+            "sar_narrative": "\nThe entity 'Consulting LLC' displays all characteristics of a shell company used for illicit flow.\nDespite receiving $2 million in revenue, the company has no employees, no website, and operates from a registered agent address.\n100% of funds are wired offshore immediately, leaving a zero balance.\n\nThis 'pass-through' nature contradicts the operation of a legitimate consulting business, which would have operational costs and retained earnings.\nThe entity appears to exist solely to layer funds between originators and offshore beneficiaries.\n"
+        },
+        {
+            "alert_type": "corruption_bribes",
+            "transaction_logs": "Cash Dep: $10,000 envelopes x 5 ($50k total). Source: Unexplained.",
+            "customer_profile": "City Council Member. Salary $60k. No other declared income.",
+            "sar_narrative": "\nUnexplained wealth and potential corruption detected for a Public Official.\nThe customer, a City Council Member, deposited $50,000 in cash over a short period, a sum nearly equal to their annual official salary.\nNo legitimate source for this cash was provided.\n\nGiven the customer's position of influence, large unaccounted cash deposits raise red flags for bribery or kickbacks.\nThe timing may coincide with voting on city contracts (further investigation needed).\nThis financial behavior is a primary indicator of public corruption.\n"
+        },
+        {
+            "alert_type": "structuring_travel",
+            "transaction_logs": "Client payments split: $9k cash, $9k cash, $2k check for single $20k trip.",
+            "customer_profile": "Travel Agency. Booking high end tours.",
+            "sar_narrative": "\nStructuring of client payments intercepted at Travel Agency.\nA single client booking for a $20,000 trip was paid for using two $9,000 cash installments and a balance check.\nThis splitting of the payment avoids the requirement for the agency to file Form 8300 (for cash >$10k in trade/business).\n\nThe customer (Travel Agency) allowed or facilitated this structuring.\nAccepting large cash payments in this manner helps clients integrate illicit cash into luxury consumption without a paper trail.\n"
+        },
+        {
+            "alert_type": "market_manipulation",
+            "transaction_logs": "Large stock purchase of 'BioTech' before FDA announcement. Sold 2 days later for +400%.",
+            "customer_profile": "Employee at FDA (relative of account holder). Hedge Fund Manager.",
+            "sar_narrative": "\nPotential Insider Trading/Market Manipulation.\nThe customer executed a large, aggressive purchase of 'BioTech' stock just 48 hours before a major FDA approval announcement.\nThe position was liquidated immediately after the news for a 400% gain.\n\nInvestigation links the account holder to a relative employed at the FDA.\nThe timing is too precise to be coincidental.\nThis suggests the use of material non-public information to profit at the expense of the general market, a serious securities violation.\n"
+        },
+        {
+            "alert_type": "laundering_construction",
+            "transaction_logs": "Payments to 'Supplies Co' (owned by same person). Prices 3x market avg.",
+            "customer_profile": "Property Developer. Vertically integrated.",
+            "sar_narrative": "\nSelf-dealing and potential laundering via inflated invoicing.\nThe Property Developer is making massive payments to 'Supplies Co' for materials.\n'Supplies Co' is owned by the developer himself.\nReview shows unit prices are 3x the market average.\n\nThis scheme allows the developer to shift funds from the development project (which may be funded by bank loans or investors) into a private entity he controls.\nThis artificially increases project costs and siphons equity/loan proceeds into personal control under the guise of business expenses.\n"
+        },
+        {
+            "alert_type": "account_takeover",
+            "transaction_logs": "Password reset. 2FA changed. Wire $50k to unknown crypto exchange.",
+            "customer_profile": "College Student. Trust fund beneficiary.",
+            "sar_narrative": "\nConfirmed Account Takeover (ATO).\nThe account security settings were altered (password reset, 2FA number changed) immediately prior to a $50,000 wire initiation.\nThe destination was a cryptocurrency exchange never used by the customer previously.\n\nThe attacker effectively locked the true customer out of the account to prevent intervention.\nThe immediate movement to crypto (irreversible) is standard operating procedure for ATO fraudsters.\nThis transaction represents a theft of funds, not authorized customer activity.\n"
+        },
+        {
+            "alert_type": "bsa_violation_check_casher",
+            "transaction_logs": "Cashed $500k in checks. Filed 0 CTRs. No AML program visible.",
+            "customer_profile": "Liquor Store. Licensed Money Service Business (MSB).",
+            "sar_narrative": "\nEgregious Bank Secrecy Act (BSA) violations by a Money Service Business (MSB).\nThe customer checks over $500,000 per month for clients but has failed to file a single Currency Transaction Report (CTR) for transactions over $10k.\nSite visit reveals no AML compliance manual or training.\n\nBy failing to report, the MSB creates a 'black hole' where criminals can convert checks to cash without government visibility.\nThis negligence facilitates money laundering for the MSB's client base.\n"
+        },
+        {
+            "alert_type": "pill_mill",
+            "transaction_logs": "Cash deposits daily. Hundreds of small co-pays. Out: Legal fees.",
+            "customer_profile": "Pharmacy. High volume of controlled substance dispensing.",
+            "sar_narrative": "\nActivity indicative of a 'Pill Mill' operation.\nThe Pharmacy account shows an excessive volume of cash receipts compared to industry peers, suggesting cash sales of controlled substances without insurance.\nOutflows are dominated by payments to criminal defense attorneys rather than pharmaceutical suppliers.\n\nThe high cash volume suggests prescriptions are being filled for non-medical users who pay cash to avoid tracking.\nThis financial profile aligns with the diversion of opioids or other scheduled drugs into the illicit market.\n"
+        },
+        {
+            "alert_type": "tbml_scrap",
+            "transaction_logs": "Export 'Scrap Metal' to Asia. Invoice $2M. Payment received from unrelated 3rd party.",
+            "customer_profile": "Scrap Yard. Family business.",
+            "sar_narrative": "\nTrade-Based Money Laundering (TBML) involving 3rd party payments.\nThe customer exported 'Scrap Metal' valued at $2 million.\nHowever, payment was not received from the importer, but from an unrelated technology company in a different country.\n\nThis 'Third Party Payment' disconnects the flow of goods from the flow of money, a key TBML indicator.\nThe high value for 'scrap' also suggests misrepresentation of goods.\nThe transaction appears to be settling a debt or moving value for an unrelated criminal network using the scrap yard's trade as cover.\n"
+        },
+        {
+            "alert_type": "dual_use_goods",
+            "transaction_logs": "Sale of 'High Speed Cameras' to 'Civilian Lab' (Front). End user: Military research.",
+            "customer_profile": "Tech Exporter. Specialized optics.",
+            "sar_narrative": "\nExport control evasion risk (Dual-Use Goods).\nThe customer sold 'High Speed Cameras' ostensibly to a 'Civilian Lab'.\nIntelligence suggests the 'Lab' is a shell front for a foreign military research entity.\nThese cameras have nuclear testing applications.\n\nThe customer may be willfully blind or complicit in bypassing export licenses.\nThe financial settlement came from a general trading company, not the lab itself, further obscuring the true end-user.\nThis facilitates illegal technology transfer.\n"
+        },
+        {
+            "alert_type": "unknown_wealth_influencer",
+            "transaction_logs": "Cash Dep: $100k in duffel bag (branch report). Claim: 'Gifts from fans'.",
+            "customer_profile": "Social Media Influencer. Age 22. No verified income contracts.",
+            "sar_narrative": "\nSuspicion of illicit source of funds for 'Influencer'.\nThe customer made a physical cash deposit of $100,000 in a duffel bag.\nWhen questioned, the source was stated as generic 'gifts from fans', which is unverifiable and inconsistent with the cash volume.\n\nLegitimate influencer income typically comes via wire/ACH from brands or platforms, not bulk cash.\nThis profile (young, high cash, vague source) often overlaps with acting as a money mule or beneficiary of fraud.\nThe 'Influencer' cover provides a convenient, though thin, explanation for wealth.\n"
+        }
+    ]
+}
