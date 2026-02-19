@@ -152,6 +152,17 @@ For model names and specifications, refer to:
   - [example-2-react-agent-mcp-server.py](chapter-05/example-2-react-agent-mcp-server.py): Building a trivial ReAct agent that uses an MCP server.
   - [example-3-fastmcp-server.py](chapter-05/example-3-fastmcp-server.py): Creating a fast MCP server.
   - [example-3-fastmcp-client.py](chapter-05/example-3-fastmcp-client.py): Client for the fast MCP server.
+- [Chapter 6](chapter-06/): Optimization: Bootstrapping and GEPA
+  - [Chapter 6 README](chapter-06/README.md): Chapter-specific notes on optimization techniques (BootstrapFewShot, KNN, MIPROv2, GEPA).
+  - [example_1_brand_voice_rewrite.py](chapter-06/example_1_brand_voice_rewrite.py): Rewrites technical error messages into a friendly brand voice using `LabeledFewShot`.
+  - [example_2_bootstrap_few_shot.py](chapter-06/example_2_bootstrap_few_shot.py): Medical coding example optimizing clinical note conversion to ICD-10 codes using `BootstrapFewShot` and tracked with MLflow.
+  - [example_2_calender_json.py](chapter-06/example_2_calender_json.py): Optimize natural language to JSON conversion for calendar events using `BootstrapFewShot`.
+  - [example_2_pareto.py](chapter-06/example_2_pareto.py): A standalone example demonstrating Pareto efficiency algorithms, a concept often used in multi-objective optimization.
+  - [example_3_knn.py](chapter-06/example_3_knn.py): Sentiment classification for e-commerce reviews using `KNNFewShot` and sentence embeddings.
+  - [example_3_minimalistic_gepa.py](chapter-06/example_3_minimalistic_gepa.py): A minimal introduction to the `GEPA` optimizer for banking intent classification.
+  - [example_4_banking_intent.py](chapter-06/example_4_banking_intent.py): Extracting financial risks from transcripts, optimized with `GEPA` and an LLM-based judge.
+  - [example_4_miprov2.py](chapter-06/example_4_miprov2.py): Generating insurance denial letters using `MIPROv2` to balance compliance, empathy, and readability.
+  - [example_5_self_evolving_fintech_compliance_agent.py](chapter-06/example_5_self_evolving_fintech_compliance_agent.py): A sophisticated self-evolving agent for FinTech compliance (SAR generation) using `GEPA`.
 - [Chapter 7](chapter-07/): MLflow Integration Examples
   - [Chapter 7 README](chapter-07/README.md): Chapter-specific notes on MLflow setup, running the server, and expected outputs.
   - [example-1-basic-qa-mlflow-integration.py](chapter-07/example-1-basic-qa-mlflow-integration.py): Basic example showing how to enable MLflow autologging with DSPy.
